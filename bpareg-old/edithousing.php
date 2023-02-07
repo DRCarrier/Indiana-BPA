@@ -5,7 +5,7 @@ body {
 }
 -->
 </style><body text="#000000" link="#FF0000" vlink="#FF0000">
-<? 
+<?php 
 
 $school_number=$_GET['school_number'];
 $room_id=$_GET['room_id'];
@@ -13,7 +13,7 @@ $room_id=$_GET['room_id'];
 
 
   
-<?
+<?php
 
 
 $con = mysql_connect('server','username','password');
