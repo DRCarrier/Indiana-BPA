@@ -10,7 +10,7 @@ body {
 }
 -->
 </style></head>
-<? 
+<?php
 
 $school_number=$_GET['school_number'];
 
