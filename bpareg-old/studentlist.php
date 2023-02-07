@@ -1,0 +1,79 @@
+<?php
+$school_number = $_GET['school_number'];
+$delete = isset($_GET['delete']) ? true : false;
+$id_num = isset($_GET['id_num']) ? $_GET['id_num'] : 0;
+
+
+$con = mysql_connect('server','username','password');
+$db = mysql_select_db('database', $con);
+
+if ($delete && $id_num > 0) {
+	mysql_query("delete from students where id_num='$id_num'");
+	
+}
+
+
+$sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
+$result = mysql_query($sql) or die(mysql_error());
+$temp = mysql_fetch_array($result);
+$school_name = $temp['school_name'];
+
+$sql = "SELECT * FROM students WHERE school_number = '$school_number'";
+$result = mysql_query($sql) or die(mysql_error());
+$student = mysql_fetch_array($result);
+
+$student_block = "<table border=\"1\">";
+$student_block .= "<td>ID Number</td>";
+$student_block .= "<td>First Name</td>";
+$student_block .= "<td>Last Name</td>";
+$student_block .= "<td>Contest 1</td>";
+$student_block .= "<td>Contest 2</td>";
+$student_block .= "<td>Shirt Size</td>";
+$student_block .= "<td>Current State</br>Officer</td>";
+$student_block .= "<td>Officer</br>Candidate</td>";
+$student_block .= "<td>Voting</br>Delegate</td>";
+$student_block .= "<td>Torch</br>Awards</td>";
+$student_block .= "<td>Open Contests</br>Only</td>";
+$student_block .= "<td>Merit</br>Scholar</td>";
+$student_block .= "<td>Delete</td>";
+$student_block .= "</tr>";
+
+while ($student) {
+
+	$student_block .= "<tr>";
+	$student_block .= "<td><a href=\"editstudent.php?id_num=$student[id_num]&school_number=$student[school_number]\">$student[id_num]</a></td>";
+	$student_block .= "<td>$student[fname]</td>";
+	$student_block .= "<td>$student[lname]</td>";
+	$student_block .= "<td>$student[cont1]</td>";
+	$student_block .= "<td>$student[cont2]</td>";
+	$student_block .= "<td>$student[size]</td>";
+	$student_block .= "<td>$student[officer]</td>";
+	$student_block .= "<td>$student[officer_candidate]</td>";
+	$student_block .= "<td>$student[vdelegate]</td>";
+	$student_block .= "<td>$student[torch]</td>";
+	$student_block .= "<td>$student[opens]</td>";
+	$student_block .= "<td>$student[merit]</td>";
+	$student_block .= "<td><a href=\"studentlist.php?school_number=$school_number&id_num=$student[id_num]&delete=1\">Delete?</a></td>";
+	$student_block .= "</tr>";
+
+	$student = mysql_fetch_array($result);
+
+}
+
+$student_block .= "</table>";
+
+?>
+
+<html>
+<head>
+<title>SLC Registration</title>
+</head>
+<body>
+<h1><font face="Arial, Helvetica, sans-serif">BPA SLC 2020 Student List</font></h1>
+<h2><?php echo "<font face=\"Arial, Helvetica, sans-serif\">$school_name - $school_number </font>"; ?>
+<br><br>
+<?php echo "$student_block"; ?>
+<br>
+<a href="/SLCReg/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
+</body>
+</html>
