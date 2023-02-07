@@ -13,7 +13,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 </head>
 <body>
 
-<? 
+<?php
 
 $school_number=$_GET['school_number'];
 
