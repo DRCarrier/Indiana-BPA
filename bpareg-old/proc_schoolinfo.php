@@ -1,5 +1,5 @@
 <body>
-<?
+<?php
 $school_number=$_POST['school_number'];
 $address=$_POST['address'];
 $city=$_POST['city'];
@@ -23,7 +23,7 @@ $accommodations=$_POST['accommodations'];
 ?>
 <form name="form1" method="post" action="index.php<? echo "?school_number=$school_number"; ?>">
 
-<?
+<?php
 
 $con = mysql_connect('server','username','password');
 $db = mysql_select_db('database', $con);
