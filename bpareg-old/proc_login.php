@@ -6,13 +6,13 @@
 </head>
 <body>
  
- <? $password3=$_POST['password3'];
+ <?php $password3=$_POST['password3'];
 $username=$_POST['username'];
 $school_number=$_POST['username'];
 ?>
 
 <form name="form1" method="post" action="index.php<? echo "?school_number=$school_number"; ?>">
-<?
+<?php
 $con = mysql_connect('server','username','password');
 $db = mysql_select_db('database', $con);
 
