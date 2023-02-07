@@ -10,7 +10,7 @@
 </head>
 
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#0000FF">
-<? 
+<?php
 $adv_id=$_POST['adv_id'];
 $school_number=$_POST['school_number'];
 $delete=$_POST['delete'];
@@ -24,7 +24,7 @@ $delete=$_POST['delete'];
       <tr>
         <td width="1%" height="279" valign="top">&nbsp;</td>
         <td width="99%" valign="top"><h2 align="left">&nbsp;
-                <?
+                <?php
 				
 $con = mysql_connect('server','username','password');
 $db = mysql_select_db('database', $con);
