@@ -7,13 +7,13 @@ body {
 </style>
 <title>SLC Registration</title>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
-<? 
+<?php 
 $school_number=$_GET['school_number'];
 
 ?>
 
 
-<?
+<?php
 
 $con = mysql_connect('server','username','password');
 $db = mysql_select_db('database', $con);
