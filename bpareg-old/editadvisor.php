@@ -8,7 +8,7 @@ body {
 <title>SLC Registration</title>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
 
-<? 
+<?php 
 
 $school_number=$_GET['school_number'];
 $adv_id=$_GET['adv_id'];
@@ -16,7 +16,7 @@ $adv_id=$_GET['adv_id'];
 
 
   
-<?
+<?php
 
 
 $con = mysql_connect('server','username','password');
