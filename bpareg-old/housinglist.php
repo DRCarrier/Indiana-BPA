@@ -1,11 +1,11 @@
-<?
+<?php
  
 $school_number=$_GET['school_number']; 
 $delete = isset($_GET['delete']) ? true : false;
 $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
 ?>
 
-<?
+<?php
  
 
 $con = mysql_connect('server','username','password');
@@ -67,9 +67,9 @@ $housing_block .= "</table>";
 <h1><font face="Arial, Helvetica, sans-serif">BPA SLC 2020 Housing List</font></h1>
 <font face="Arial, Helvetica, sans-serif">
 <p><strong><font size="-1">Note: </font></strong><font size="-1">In the table below, the Room ID Number has been automatically assigned and cannot be changed. These ID numbers will not begin with 1 and may not be in sequence.</font></p></font>
-<h2><? echo "<font face=\"Arial, Helvetica, sans-serif\">$school_name - $school_number </font>"; ?>
-<? echo "$housing_block"; ?>
+<h2><?php echo "<font face=\"Arial, Helvetica, sans-serif\">$school_name - $school_number </font>"; ?>
+<?php echo "$housing_block"; ?>
 <br>
-<a href="/SLCReg/index.php<? echo "?school_number=$school_number"; ?>">Home</a>
+<a href="/SLCReg/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
 </body>
 </html>
