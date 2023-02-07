@@ -10,7 +10,7 @@
 </head>
 
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#0000FF">
-<? $password=$_POST['password'];
+<?php $password=$_POST['password'];
 $password2=$_POST['password2'];
 $username=$_POST['username'];
 $school_number=$_POST['username'];
@@ -24,7 +24,7 @@ $school_number=$_POST['username'];
       <tr>
         <td width="1%" height="279" valign="top">&nbsp;</td>
         <td width="99%" valign="top"><h2 align="left">&nbsp;
-                <?
+                <?php
 				
 $con = mysql_connect('server','username','password');
 $db = mysql_select_db('database', $con);
