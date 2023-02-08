@@ -1,4 +1,5 @@
-<?
+//lets you edit an advisor
+<?php
 $adv_id=$_POST['adv_id'];
 $school_number=$_POST['school_number'];
 $fname=$_POST['fname'];
