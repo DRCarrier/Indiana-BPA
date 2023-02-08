@@ -1,4 +1,5 @@
-<?
+//let syou edit housing info (connects to database)
+<?php
 $room_id=$_POST['room_id'];
 $school_number=$_POST['school_number'];
 $a_s=$_POST['a_s'];
