@@ -7,7 +7,7 @@
  
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000" vlink="#FF0000" alink="#FF
 0000">
-<? 
+<?php
 
 $school_number=$_GET['school_number'];
 ?>
