@@ -1,5 +1,5 @@
-<?
-
+<?php
+// enters school #, first and last name, phone, email, size, a or c, connects with database
 
 $school_number=$_POST['school_number'];
 $fname=$_POST['fname'];
