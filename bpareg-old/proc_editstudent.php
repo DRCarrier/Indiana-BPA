@@ -1,4 +1,4 @@
-<?
+<?php
 $id_num=$_POST['id_num'];
 $school_number=$_POST['school_number'];
 $fname=$_POST['fname'];
