@@ -6,7 +6,7 @@
 </head> 
  
 <body bgcolor="#FFFFFF" text="#494949" link="#0a57bf" vlink="#0a57bf" alink="#000000">
-<? 
+<?php 
 
 $school_number=$_GET['school_number'];
 
@@ -48,22 +48,22 @@ $school_number=$_GET['school_number'];
      
     <td width="52%" height="30">  
   
-<p><font face="Arial, Helvetica, sans-serif" >  <font color="#2063f9"> <a href="schoolinfo.php<?  echo "?school_number=$school_number";  ?>">Enter School Information</a></p> 
+<p><font face="Arial, Helvetica, sans-serif" >  <font color="#2063f9"> <a href="schoolinfo.php<?php  echo "?school_number=$school_number";  ?>">Enter School Information</a></p> 
   
- <p> <a href="editschool.php<?  echo "?school_number=$school_number"; ?>">Edit School Information</a></p> 
+ <p> <a href="editschool.php<?php  echo "?school_number=$school_number"; ?>">Edit School Information</a></p> 
   
- <p> <a href="advisors.php<?  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a></p>
+ <p> <a href="advisors.php<?php  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a></p>
   
-<p>  <a href="advisorlist.php<? echo "?school_number=$school_number";  ?>">View/Edit Advisor and Chaperone Information</a></font></p> 
+<p>  <a href="advisorlist.php<?php echo "?school_number=$school_number";  ?>">View/Edit Advisor and Chaperone Information</a></font></p> 
   
-<p> <a href="studentlist.php<?  echo "?school_number=$school_number";  ?>">View/Edit Student Information</a></p>
+<p> <a href="studentlist.php<?php  echo "?school_number=$school_number";  ?>">View/Edit Student Information</a></p>
   
-<p>  <a href="students.php<? echo "?school_number=$school_number";  ?>">Add  Student(s)</a></p>
+<p>  <a href="students.php<?php echo "?school_number=$school_number";  ?>">Add  Student(s)</a></p>
   
-<p>  <a href="housing.php<?  echo "?school_number=$school_number"; ?>">Enter Housing Information</a> </p> 
+<p>  <a href="housing.php<?php  echo "?school_number=$school_number"; ?>">Enter Housing Information</a> </p> 
   
-<p>  <a href="housinglist.php<?  echo "?school_number=$school_number";  ?>">View/Edit Housing Information</a></p>
- <p> <a href="finalize.php<?  echo "?school_number=$school_number";  ?>">Finalize Registration</a></p> </font>
+<p>  <a href="housinglist.php<?php  echo "?school_number=$school_number";  ?>">View/Edit Housing Information</a></p>
+ <p> <a href="finalize.php<?php echo "?school_number=$school_number";  ?>">Finalize Registration</a></p> </font>
   
 </table> 
 <p><strong><font face="Arial, Helvetica, sans-serif">Invoices will be emailed to advisors by February 2. If you would like to calculate the total cost for your SLC registration, chaperone T-shirts, and housing click <a href="calc_form.pdf" target="blank">here</a> to access a form for calculating your total amount owed.</font></strong></p> 
