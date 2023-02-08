@@ -7,11 +7,11 @@
  
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000" vlink="#FF0000" alink="#FF
 0000">
-<? 
+<?php 
 
 $school_number=$_GET['school_number'];
 ?>
-
+//gets school number
 
 
 <table width="87%" align="center"> 
@@ -48,22 +48,22 @@ $school_number=$_GET['school_number'];
     <td width="52%" height="30">  
 <p>
    
-  <a href="schoolinfo.php<?  echo "?school_number=$school_number";  ?>">Enter School Information</a><br> 
+  <a href="schoolinfo.php<?php  echo "?school_number=$school_number";  ?>">Enter School Information</a><br> 
   
-  <a href="editschool.php<?  echo "?school_number=$school_number"; ?>">Edit School Information</a><br> 
+  <a href="editschool.php<?php  echo "?school_number=$school_number"; ?>">Edit School Information</a><br> 
   
-  <a href="advisors.php<?  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a><br> 
+  <a href="advisors.php<?php  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a><br> 
   
-  <font color="#FF0000"><a href="advisorlist.php<? echo "?school_number=$school_number";  ?>">View/Edit Advisor and Chaperone Information</a></font><br> 
+  <font color="#FF0000"><a href="advisorlist.php<?php echo "?school_number=$school_number";  ?>">View/Edit Advisor and Chaperone Information</a></font><br> 
   
-  <a href="studentlist.php<?  echo "?school_number=$school_number";  ?>">View/Edit Student Information</a><br> 
+  <a href="studentlist.php<?php  echo "?school_number=$school_number";  ?>">View/Edit Student Information</a><br> 
   
-  <a href="students.php<? echo "?school_number=$school_number";  ?>">Add  Student(s)</a><br> 
+  <a href="students.php<?php echo "?school_number=$school_number";  ?>">Add  Student(s)</a><br> 
   
-  <a href="housing.php<?  echo "?school_number=$school_number"; ?>">Enter Housing Information</a> <br> 
+  <a href="housing.php<?php  echo "?school_number=$school_number"; ?>">Enter Housing Information</a> <br> 
   
-  <a href="housinglist.php<?  echo "?school_number=$school_number";  ?>">View/Edit Housing Information</a><br>
-  <a href="finalize.php<?  echo "?school_number=$school_number";  ?>">Finalize Registration</a><br>
+  <a href="housinglist.php<?php echo "?school_number=$school_number";  ?>">View/Edit Housing Information</a><br>
+  <a href="finalize.php<?php  echo "?school_number=$school_number";  ?>">Finalize Registration</a><br>
   
   <br> 
   <br>
