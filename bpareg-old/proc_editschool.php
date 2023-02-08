@@ -1,4 +1,4 @@
-<?
+<?php
 $school_number=$_POST['school_number'];
 $address=$_POST['address'];
 $city=$_POST['city'];
