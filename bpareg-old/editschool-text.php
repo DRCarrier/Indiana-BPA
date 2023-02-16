@@ -14,14 +14,18 @@ $school_number=$_GET['school_number'];
 
 
 <?php
+//Connection to DB using PDO:
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM SLCschl WHERE school_number = '$school_number'";
 
-$query = mysql_query($sql) or die(mysql_error());
-$school = mysql_fetch_array($query);
+$query = $con->query($sql) or die($con->errorInfo());
+$school = $query->fetch(PDO::FETCH_BOTH);
 
  echo "
 <html>
