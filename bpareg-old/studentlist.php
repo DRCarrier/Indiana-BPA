@@ -3,24 +3,28 @@ $school_number = $_GET['school_number'];
 $delete = isset($_GET['delete']) ? true : false;
 $id_num = isset($_GET['id_num']) ? $_GET['id_num'] : 0;
 
+//Connetion to DB with PDO:
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($delete && $id_num > 0) {
-	mysql_query("delete from students where id_num='$id_num'");
+	$con->query("delete from students where id_num='$id_num'");
 	
 }
 
 
 $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$temp = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$temp = $result->fetch(PDO::FETCH_BOTH);
 $school_name = $temp['school_name'];
 
 $sql = "SELECT * FROM students WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$student = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$student = $result->fetch(PDO::FETCH_BOTH);
 
 $student_block = "<table border=\"1\">";
 $student_block .= "<td>ID Number</td>";
@@ -56,7 +60,7 @@ while ($student) {
 	$student_block .= "<td><a href=\"studentlist.php?school_number=$school_number&id_num=$student[id_num]&delete=1\">Delete?</a></td>";
 	$student_block .= "</tr>";
 
-	$student = mysql_fetch_array($result);
+	$student = $result->fetch(PDO::FETCH_BOTH);
 
 }
 
