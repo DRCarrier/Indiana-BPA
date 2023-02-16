@@ -19,8 +19,13 @@ $adv_id=$_GET['adv_id'];
 <?php
 
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 
 $sql = "SELECT * FROM SLCadv WHERE adv_id = '$adv_id' AND school_number='$school_number'";
