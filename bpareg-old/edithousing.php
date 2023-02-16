@@ -15,15 +15,18 @@ $room_id=$_GET['room_id'];
   
 <?php
 
+//Connection to DB using PDO:
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
-
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM housing WHERE room_id = '$room_id' AND school_number='$school_number'";
 
-$query = mysql_query($sql) or die(mysql_error());
-$housing = mysql_fetch_array($query);
+$query = $con->query($sql) or die($con->errorInfo());
+$housing = $query->fetch(PDO::FETCH_BOTH);
 
 echo "
 <html>
