@@ -26,8 +26,13 @@ $delete=$_POST['delete'];
         <td width="99%" valign="top"><h2 align="left">&nbsp;
                 <?php
 				
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 
 $sql = "DELETE from SLCadv WHERE adv_id='$adv_id'";
