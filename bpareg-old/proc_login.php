@@ -13,8 +13,13 @@ $school_number=$_POST['username'];
 
 <form name="form1" method="post" action="index.php<? echo "?school_number=$school_number"; ?>">
 <?php
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 $query = "UPDATE `login` SET `password3` =  '$password3' WHERE `username`='$username'";
 
