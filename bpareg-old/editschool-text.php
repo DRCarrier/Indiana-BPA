@@ -19,12 +19,12 @@ $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
 
-$conn = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
-$conn -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM SLCschl WHERE school_number = '$school_number'";
 
-$query = $conn->query($sql) or die($conn->errorInfo());
+$query = $con->query($sql) or die($con->errorInfo());
 $school = $query->fetch(PDO::FETCH_BOTH);
 
  echo "
