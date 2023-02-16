@@ -17,13 +17,18 @@ $merit=$_POST['merit'];
 header ("Location: /SLCReg/studentlist.php?school_number=$school_number");
 echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 
+//Connection to DB using PDO:
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "UPDATE students SET fname='$fname', lname='$lname', cont1='$cont1', cont2='$cont2', size='$size', officer='$officer', officer_candidate='$officer_candidate', vdelegate='$vdelegate', torch='$torch', opens='$opens', merit='$merit', UpdateDate=NOW() WHERE id_num = '$id_num'";
 
-$query = mysql_query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 
 
