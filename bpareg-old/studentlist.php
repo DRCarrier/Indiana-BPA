@@ -3,7 +3,7 @@ $school_number = $_GET['school_number'];
 $delete = isset($_GET['delete']) ? true : false;
 $id_num = isset($_GET['id_num']) ? $_GET['id_num'] : 0;
 
-//Connetion to DB with PDO:
+//Connection to DB with PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
