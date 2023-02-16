@@ -4,8 +4,13 @@ $delete = isset($_GET['delete']) ? true : false;
 $adv_id = isset($_GET['adv_id']) ? $_GET['adv_id'] : 0;
 
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 if ($delete && $adv_id > 0) {
 	mysql_query("delete from SLCadv where adv_id=$adv_id");
