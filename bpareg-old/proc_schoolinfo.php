@@ -25,8 +25,13 @@ $accommodations=$_POST['accommodations'];
 
 <?php
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 $query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`, `arrive`, `depart`,  `overflowSH`, `envact`, `community`, `olympics`, `safety`, `chact`, `service`, `member`, `quality`, `social`, `marketing`, `other_recog`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', '$arrive', '$depart', '$overflowSH', '$envact', '$community', '$olympics', '$safety', '$chact', '$service', '$member', '$quality', '$social', '$marketing', '$other_recog', '$accommodations', NOW(), NOW())";
 
