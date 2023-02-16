@@ -8,16 +8,28 @@ $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
 <?php
  
 
-$con = mysql_connect('server','username','password');
-$db = mysql_select_db('database', $con);
+//$con = mysql_connect('server','username','password');
+//$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+
+
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($delete && $room_id > 0) {
-mysql_query("delete from housing where room_id='$room_id'");
+//mysql_query("delete from housing where room_id='$room_id'");
+$con->query("delete from housing where room_id='$room_id'");
 }
 
 $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$temp = mysql_fetch_array($result);
+//$result = mysql_query($sql) or die(mysql_error());
+//$temp = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$temp = $result->fetch(PDO::FETCH_BOTH);
+
+
 $school_name = $temp[school_name];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
