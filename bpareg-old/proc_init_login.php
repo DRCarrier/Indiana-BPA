@@ -76,8 +76,8 @@ if ($pw) {
 
 
 
-
-mysql_close($con);
+	
+	$con= NULL;
 
 
 
