@@ -11,7 +11,7 @@ $username=$_POST['username'];
 $school_number=$_POST['username'];
 ?>
 
-<form name="form1" method="post" action="index.php<? echo "?school_number=$school_number"; ?>">
+<form name="form1" method="post" action="index.php<?php echo "?school_number=$school_number"; ?>">
 <?php
 $servername = "localhost";
 $username = "bpareg";
@@ -24,12 +24,12 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $query = "UPDATE `login` SET `password3` =  '$password3' WHERE `username`='$username'";
 
  
-mysql_query($query, $con);
+$con->query($query);
 
 $sql2 = "SELECT * FROM login WHERE username = '$username'";
 
-$query2 = mysql_query($sql2) or die(mysql_error());
-$login = mysql_fetch_array($query2);
+$query2 = $con->query($sql2) or die($con->errorInfo());
+$login = $query2->fetch(PDO::FETCH_BOTH); 
 
 if ($login[username]==$username & $login[password]==$login[password3]) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</h2></font>'; 
 	
