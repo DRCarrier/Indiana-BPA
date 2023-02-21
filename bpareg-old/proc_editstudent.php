@@ -31,7 +31,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "UPDATE students SET fname='$fname', lname='$lname', cont1='$cont1', cont2='$cont2', size='$size', officer='$officer', officer_candidate='$officer_candidate', vdelegate='$vdelegate', torch='$torch', opens='$opens', merit='$merit', UpdateDate=NOW() WHERE id_num = '$id_num'";
 
 //$query = mysql_query($sql) or die(mysql_error());
-$query = $con->query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 
 ?>
