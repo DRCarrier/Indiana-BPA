@@ -19,7 +19,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "UPDATE SLCschl SET completed='$completed', advisors='$advisors', chaperones='$chaperones', students='$students', FinalizeDate=NOW() WHERE school_number='$school_number'"; 
 
 //$query = mysql_query($sql) or die(mysql_error());
-$query = $con->query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 header ("Location: /SLCReg/index.php?school_number=$school_number");
 
