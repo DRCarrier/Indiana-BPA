@@ -158,9 +158,9 @@ $school_number=$_GET['school_number'];
   <p align="left"> <font face="Times New Roman, Times, serif">
     <textarea name="accommodations" cols="200" id="accommodations"></textarea>
     </font></p>
-<input type="hidden" name="school_number" value="<? echo "$school_number"; ?>">
+<input type="hidden" name="school_number" value="<?php echo "$school_number"; ?>">
 <input type="submit">
-  <p align="center"><a href="index.php<? echo "?school_number=$school_number"; ?>"><font face="Arial, Helvetica, sans-serif">Home</font></a> 
+  <p align="center"><a href="index.php<?php echo "?school_number=$school_number"; ?>"><font face="Arial, Helvetica, sans-serif">Home</font></a> 
   </p>
   <p align="left">&nbsp; </p>
 </form>
