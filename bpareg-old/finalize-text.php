@@ -24,8 +24,8 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM SLCschl WHERE school_number = '$school_number'";
 
-$query = mysql_query($sql) or die(mysql_error());
-$school = mysql_fetch_array($query);
+$query = $con->query($sql) or die($con->errorInfo());
+$school = $query->fetch(PDO::FETCH_BOTH);
 
  echo "
 <html>
