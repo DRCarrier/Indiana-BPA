@@ -1,5 +1,4 @@
 <html>
-//log in to access registration
 <head>
 <meta http-equiv="Content-Language" content="en-us">
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
