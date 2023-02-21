@@ -21,7 +21,7 @@ $other_recog=$_POST['other_recog'];
 $accommodations=$_POST['accommodations'];
 
 ?>
-<form name="form1" method="post" action="index.php<? echo "?school_number=$school_number"; ?>">
+<form name="form1" method="post" action="index.php<?php echo "?school_number=$school_number"; ?>">
 
 <?php
 
@@ -35,11 +35,14 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`, `arrive`, `depart`,  `overflowSH`, `envact`, `community`, `olympics`, `safety`, `chact`, `service`, `member`, `quality`, `social`, `marketing`, `other_recog`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', '$arrive', '$depart', '$overflowSH', '$envact', '$community', '$olympics', '$safety', '$chact', '$service', '$member', '$quality', '$social', '$marketing', '$other_recog', '$accommodations', NOW(), NOW())";
 
-			$query2="SELECT school_number FROM SLCschl WHERE school_number ='$school_number'";
-			$result=@mysql_query($query2);
-	
-			if (mysql_num_rows($result)==0) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click Next button to return to the registration home page.</h2></font>'; 
-	mysql_query($query, $con);
+			//$query2="SELECT school_number FROM SLCschl WHERE school_number ='$school_number'"; 
+			$query2="SELECT COUNT(*) FROM SLCschl WHERE school_number ='$school_number'";
+			$result=@$con->query($query2);
+			$count = $result->fetchColumn();
+			
+	//Previoulsy was: if(mysql_num_rows($result)==0)...
+			if ($count==0) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click Next button to return to the registration home page.</h2></font>'; 
+	$con->query($query);
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
 			else{echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have already entered your school information. If you need to change your information, click the Edit School Information link on the registration home page.  Click the Next button to return to the registration home page.</h2></font>'; 
 			echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";}
