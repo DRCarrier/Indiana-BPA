@@ -21,7 +21,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "INSERT INTO housing (`school_number`, `a_s`, `gender`, `type`, `occ_id1`, `occ_id2`, `occ_id3`, `occ_id4`) VALUES ('$school_number', '$a_s', '$gender', '$type', '$occ_id1', '$occ_id2', '$occ_id3', '$occ_id4');";
 
-$query = mysql_query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 if ($finished) { header("Location: /SLCReg/index.php?school_number=$school_number"); }
 if ($addanother) { header("Location: /SLCReg/housing.php?school_number=$school_number"); }
