@@ -30,8 +30,8 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "SELECT * FROM SLCadv WHERE adv_id = '$adv_id' AND school_number='$school_number'";
 
-$query = mysql_query($sql) or die(mysql_error());
-$advisor = mysql_fetch_array($query);
+$query = $con->query($sql) or die($con->errorInfo());
+$advisor = $query->fetch(PDO::FETCH_BOTH);
 
 echo "
 <html>
