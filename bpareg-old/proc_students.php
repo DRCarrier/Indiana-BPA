@@ -14,6 +14,7 @@ $opens=$_POST['opens'];
 $merit=$_POST['merit'];
 $finished=$_POST['finished'];
 $addanother=$_POST['addanother'];
+
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
@@ -24,7 +25,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "INSERT INTO students (`id_num`, `school_number`, `fname`, `lname`, `cont1`, `cont2`, `size`, `officer`, `officer_candidate`, `vdelegate`, `torch`, `opens`, `merit`, `RegDate`, `UpdateDate`) VALUES ('$id_num', '$school_number', '$fname', '$lname', '$cont1', '$cont2', '$size', '$officer', '$officer_candidate', '$vdelegate', '$torch', '$opens', '$merit', NOW(), NOW());";
 
-$query = mysql_query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 if ($finished) { header("Location: /SLCReg/index.php?school_number=$school_number"); }
 if ($addanother) { header("Location: /SLCReg/students.php?school_number=$school_number"); }
