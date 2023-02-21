@@ -33,8 +33,10 @@ $temp = $result->fetch(PDO::FETCH_BOTH);
 $school_name = $temp[school_name];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$housing = mysql_fetch_array($result);
+//$result = mysql_query($sql) or die(mysql_error());
+//$housing = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$housing = $result->fetch(PDO::FETCH_BOTH);
 
 $housing_block = "<table border=\"1\">";
 $housing_block .= "<td>Room ID Number</td>";
@@ -63,7 +65,8 @@ $housing_block .= "<td>$housing[occ_id4]</td>";
 $housing_block .= "<td><a href=\"housinglist.php?school_number=$school_number&room_id=$housing[room_id]&delete=1\">Delete?</a></td>";
 $housing_block .= "</tr>";
 
-$housing = mysql_fetch_array($result);
+ //$housing = mysql_fetch_array($result);
+$housing = $results->fetch(PDO::FETCH_BOTH);
 }
 
 
