@@ -114,14 +114,14 @@ $school_number=$_GET['school_number'];
     </tr>
   </table>
   <br>
-  <p align="center"><input type="hidden" name="school_number" value="<? echo "$school_number"; ?>"><input type="submit" name="addanother" value="Add Another Advisor/Chaperone">
+  <p align="center"><input type="hidden" name="school_number" value="<?php echo "$school_number"; ?>"><input type="submit" name="addanother" value="Add Another Advisor/Chaperone">
     <br>
     <br>
 <input type="submit" name="finished" value="Finished Adding Advisors/Chapones"><br>
 </p>
   <table width="30%" align="center">
     <tr align="center" valign="middle"> 
-      <td width="24%"><font face="Arial, Helvetica, sans-serif"><a href="index.php<? echo "?school_number=$school_number"; ?>">Home</a></font></td>
+      <td width="24%"><font face="Arial, Helvetica, sans-serif"><a href="index.php<?php echo "?school_number=$school_number"; ?>">Home</a></font></td>
     </tr>
   </table>
   <p align="center">&nbsp;</p>
