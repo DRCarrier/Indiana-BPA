@@ -17,7 +17,7 @@ $delete=$_POST['delete'];
 ?>
 
 
- <form name="form1" method="post" action="advisorlist.php?school_number=<? echo $school_number ?>">
+ <form name="form1" method="post" action="advisorlist.php?school_number=<?php echo $school_number ?>">
  
    
     <table width="100%" border="0">
@@ -38,8 +38,9 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "DELETE from SLCadv WHERE adv_id='$adv_id'";
 
 
-mysql_query($sql, $con);
-	
+//mysql_query($sql, $con);
+$con->query($sql);
+       
 	
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
 
@@ -48,7 +49,8 @@ mysql_query($sql, $con);
 
 
 
-mysql_close($con);
+//mysql_close($con);
+$con = NULL;
 
 
 
