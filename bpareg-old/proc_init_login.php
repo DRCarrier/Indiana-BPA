@@ -17,7 +17,7 @@ $school_number=$_POST['username'];
 ?>
 
 
- <form name="form1" method="post" action="/SLCReg/index.php<? echo "?school_number=$school_number"; ?>">
+ <form name="form1" method="post" action="/SLCReg/index.php<?php echo "?school_number=$school_number"; ?>">
  
    
     <table width="100%" border="0">
@@ -46,14 +46,16 @@ if ($password==$password2) {
 
 if ($pw) {
 			$query2="SELECT username FROM login WHERE username ='$username'";
-			$result=@mysql_query($query2);
-
+			$result=@$con->query($query2); 
+			$count = $result->fetchColumn();		
+	
 			$query3="SELECT school_number FROM schools WHERE school_number='$username'";
-			$result2=@mysql_query($query3);
-			
-			if (mysql_num_rows($result)==0) {
-							if (mysql_num_rows($result2)==1) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created.  Click the Next button to continue the registration process.</h2></font>'; 
-	mysql_query($sql, $con);
+			$result2=@$con->query($query3);
+			$count2 = $result->fetchColumn();
+	
+			if ($count==0) {
+							if ($count2==1) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created.  Click the Next button to continue the registration process.</h2></font>'; 
+	$con->query($sql);
 	
 	
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
