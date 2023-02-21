@@ -28,7 +28,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "UPDATE housing SET a_s='$a_s', gender='$gender', type='$type', occ_id1='$occ_id1', occ_id2='$occ_id2', occ_id3='$occ_id3', occ_id4='$occ_id4' WHERE room_id = '$room_id'";
 
 //$query = mysql_query($sql) or die(mysql_error());
-$query = $con->query($sql) or die(mysql_error());
+$query = $con->query($sql) or die($con->errorInfo());
 
 
 
