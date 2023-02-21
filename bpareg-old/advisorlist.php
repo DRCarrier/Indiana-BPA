@@ -13,18 +13,18 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 if ($delete && $adv_id > 0) {
-	mysql_query("delete from SLCadv where adv_id=$adv_id");
+	$con->query("delete from SLCadv where adv_id=$adv_id");
 	
 }
 
 $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$temp = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$temp = $result->fetch(PDO::FETCH_BOTH);
 $school_name = $temp['school_name'];
 
 $sql = "SELECT * FROM SLCadv WHERE school_number = '$school_number'";
-$result = mysql_query($sql) or die(mysql_error());
-$advisor = mysql_fetch_array($result);
+$result = $con->query($sql) or die($con->errorInfo());
+$advisor = $result->fetch(PDO::FETCH_BOTH);
 
 $advisor_block = "<table border=\"1\">";
 $advisor_block .= "<td>ID Number</td>";
@@ -59,7 +59,7 @@ while ($advisor) {
 	$advisor_block .= "<td><a href=\"advisorlist.php?school_number=$school_number&adv_id=$advisor[adv_id]&delete=1\">Delete?</a></td>";
 	$advisor_block .= "</tr>";
 
-	$advisor = mysql_fetch_array($result);
+	$advisor = $result->fetch(PDO::FETCH_BOTH);
 
 }
 
