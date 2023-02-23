@@ -9,7 +9,7 @@
 0000">
 <?php
 //gets school number
-$school_number=$_GET['school_number'];
+$school_number=$_POST['school_number'];
 ?>
 
 
