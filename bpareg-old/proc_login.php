@@ -9,7 +9,7 @@
     <?php
     $password3 = $_POST['password3'];
     $username = $_POST['username'];
-    $school_number = $_POST['school_number']; 
+    $school_number = $_POST['username']; 
 
     // establish database connection
     $servername = "localhost";
