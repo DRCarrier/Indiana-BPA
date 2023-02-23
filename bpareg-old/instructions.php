@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-//instructions for registration
+
 <html>
 <head>
 <title>SLC Registration</title>
