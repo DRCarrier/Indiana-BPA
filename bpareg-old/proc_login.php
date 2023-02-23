@@ -33,7 +33,7 @@ $login = $query2->fetch(PDO::FETCH_BOTH);
 
 if ($login['username'] == $username && $login['password'] == $password3) {
     echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
-}
+
 	
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
 	
