@@ -30,7 +30,7 @@ $sql2 = "SELECT * FROM login WHERE username = '$username'";
 
 $query2 = $con->query($sql2) or die($con->errorInfo());
 $login = $query2->fetch(PDO::FETCH_BOTH); 
-echo "<h1>username:".$login[username]."</h1>"
+
 if ($login[username]==$usernameX & $login[password]==$login[password3]) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</h2></font>'; 
 	
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
