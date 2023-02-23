@@ -1,6 +1,17 @@
 <?php
 // enters school #, first and last name, phone, email, size, a or c, connects with database
 
+
+//$con = mysql_connect('server','username','password');
+//$db = mysql_select_db('database', $con);
+$servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+ 
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
 $school_number=$_POST['school_number'];
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
@@ -15,14 +26,7 @@ $AssignmentComment=$_POST['AssignmentComment'];
 $finished=$_POST['finished'];
 $addanother=$_POST['addanother'];
 
-//$con = mysql_connect('server','username','password');
-//$db = mysql_select_db('database', $con);
-$servername = "localhost";
-$username = "bpareg";
-$password = "Planetary533TrollOhm";
- 
-$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
-$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
 
 $sql = "INSERT INTO SLCadv (`school_number`, `fname`, `lname`, `sphone`, `cell`, `email`, `size`, `a_c`, `ChapAssign`, `SameAssignment`, `AssignmentComment`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$fname', '$lname', '$sphone', '$cell', '$email', '$size', '$a_c', '$ChapAssign', '$SameAssignment', '$AssignmentComment', NOW(), NOW());";
