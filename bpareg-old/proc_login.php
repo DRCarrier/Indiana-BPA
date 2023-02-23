@@ -7,7 +7,7 @@
 <body>
  
  <?php $password3=$_POST['password3'];
-$usernameX=$_POST['username'];
+$username=$_POST['username'];
 $school_number=$_POST['username'];
 ?>
 
@@ -31,7 +31,9 @@ $sql2 = "SELECT * FROM login WHERE username = '$username'";
 $query2 = $con->query($sql2) or die($con->errorInfo());
 $login = $query2->fetch(PDO::FETCH_BOTH); 
 
-if ($login[username]==$usernameX & $login[password]==$login[password3]) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</h2></font>'; 
+if ($login['username'] == $username && $login['password'] == $password3) {
+    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
+}
 	
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
 	
