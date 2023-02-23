@@ -1,19 +1,21 @@
 <?php
 // enters school #, first and last name, phone, email, size, a or c, connects with database
 
+//previous code = $lname=$_POST['lname'];
+
 $school_number = $_POST['school_number'] ?? '';
 $fname=$_POST['fname'] ?? '';
-$lname=$_POST['lname'];
-$sphone=$_POST['sphone'];
-$cell=$_POST['cell'];
-$email=$_POST['email'];
-$size=$_POST['size'];
-$a_c=$_POST['a_c'];
-$ChapAssign=$_POST['ChapAssign'];
-$SameAssignment=$_POST['SameAssignment'];
-$AssignmentComment=$_POST['AssignmentComment'];
-$finished=$_POST['finished'];
-$addanother=$_POST['addanother'];
+$lname=$_POST['lname'] ??'';
+$sphone=$_POST['sphone'] ??'';
+$cell=$_POST['cell'] ??'';
+$email=$_POST['email'] ??'';
+$size=$_POST['size'] ??'';
+$a_c=$_POST['a_c'] ??'';
+$ChapAssign=$_POST['ChapAssign'] ??'';
+$SameAssignment=$_POST['SameAssignment'] ??'';
+$AssignmentComment=$_POST['AssignmentComment'] ??'';
+$finished=$_POST['finished'] ??'';
+$addanother=$_POST['addanother'] ??'';
 
 //$con = mysql_connect('server','username','password');
 //$db = mysql_select_db('database', $con);
