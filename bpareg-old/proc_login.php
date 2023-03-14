@@ -7,9 +7,13 @@
 <body>
     
     <?php
+    //Creates a session variable
+    session_start();
+    
     $password3 = $_POST['password3'];
     $username = $_POST['username'];
-    $school_number = $_POST['username']; 
+    //$school_number = $_POST['username'];
+    $_SESSION["school_number"]= $username;
 
     // establish database connection
     $servername = "localhost";
