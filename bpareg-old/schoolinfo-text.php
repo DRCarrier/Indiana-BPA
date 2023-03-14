@@ -160,7 +160,7 @@ $school_number=$_GET['school_number'];
     </font></p>
 <input type="hidden" name="school_number" value="<?php echo "$school_number"; ?>">
 <input type="submit">
-  <p align="center"><a href="index.php<?php echo "?school_number=$school_number"; ?>"><font face="Arial, Helvetica, sans-serif">Home</font></a> 
+  <p align="center"><a href="index-text-main.php<?php echo "?school_number=$school_number"; ?>"><font face="Arial, Helvetica, sans-serif">Home</font></a> 
   </p>
   <p align="left">&nbsp; </p>
 </form>
