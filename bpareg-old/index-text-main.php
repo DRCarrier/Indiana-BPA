@@ -29,7 +29,7 @@ $school_number=$_POST['school_number'];
 <ul> 
   <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="instructions.php" target="_blank">Instructions</a></font></li> 
 
-  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="slc-checklist.pdf" target="_blank">SLC Registration Checklist</a></font></li>
+  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="checklist.pdf" target="_blank">SLC Registration Checklist</a></font></li>
 
 <!--  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="slc-preview.pdf" target="_blank">SLC Preview</a></font></li>    -->
 
