@@ -223,7 +223,7 @@ $school_number=$_GET['school_number'];
     </p>
     <table width="30%" align="center">
       <tr align="center" valign="middle"> 
-        <td width="24%"><font face="Arial, Helvetica, sans-serif"><a href="index.php<?php echo "?school_number=$school_number" ?>">Home</a></font></td>
+        <td width="24%"><font face="Arial, Helvetica, sans-serif"><a href="index-text-main.php<?php echo "?school_number=$school_number" ?>">Home</a></font></td>
       </tr>
     </table>
     <p><br>
