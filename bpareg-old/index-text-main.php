@@ -9,17 +9,22 @@
  
  
 <?php 
-//Allows the session varianle to be used
  session_start();
- if(isset($_SESSION["school_number"])){
-  
- }else{header("Location: /new/error.php");
- }
+ ?>
  
-//$school_number=$_POST['school_number'];
 
+ 
+ 
 
+<?php
+if(isset($_SESSION["school_number"])){
+  
+}else{header("Location: /new/error.php");
+ }
+ //$school_number=$_POST['school_number'];
 ?>
+ 
+ 
 
 
 
@@ -61,7 +66,7 @@
 <p><font face="Arial, Helvetica, sans-serif" >  <font color="#2063f9"> <a href="schoolinfo.php<?php  echo "?school_number=$school_number";  ?>">Enter School Information</a></p> 
   
  <!--<p> <a href="editschool.php<?php  echo "?school_number=$school_number"; ?>">Edit School Information</a></p>-->
- <p> <a href="editschool.php<?php  echo $_SESSION["school_number"]; ?>">Edit School Information</a></p> 
+ <p> <a href="editschool.php<?php  echo "?school_number=$_SESSION["school_number"]"; ?>">Edit School Information</a></p> 
   
  <p> <a href="advisors.php<?php  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a></p>
   
