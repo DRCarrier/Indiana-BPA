@@ -39,7 +39,7 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 <tr><td>Arrival Time on Sunday: </td><td><input type=\"text\" name=\"arrive\" value=\"$school[arrive]\"></td></tr> 
 <tr><td>Departure Time on Tuesday: </td><td> <input type=\"text\" name=\"depart\" value=\"$school[depart]\"></td></tr>
 \n
-<tr><td>Overflow Housing at Spring Hill Suites: </td><td> <input type=\"checkbox\" name=\"overflowSH\" value=\"y\""; if ($school[overflowSH]) { echo " checked=\"checked\""; } echo "></td></tr>\n
+<!--<tr><td>Overflow Housing at Spring Hill Suites: </td><td> <input type=\"checkbox\" name=\"overflowSH\" value=\"y\""; if ($school[overflowSH]) { echo " checked=\"checked\""; } echo "></td></tr>\n-->
 <tr><td>Environmental Action/Awareness: </td><td> <input type=\"checkbox\" name=\"envact\" value=\"y\""; if ($school[envact]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school[safety]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Community Service Award: </td><td> <input type=\"checkbox\" name=\"community\" value=\"y\""; if ($school[community]) { echo " checked=\"checked\""; } echo "></td></tr>\n
