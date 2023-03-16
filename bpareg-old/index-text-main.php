@@ -21,7 +21,7 @@ if(isset($_SESSION["school_number"])){
   
 }else{header("Location: /new/error.php");
  }
- //$school_number=$_POST['school_number'];
+ $school_number=$_POST['school_number'];
 ?>
  
  
