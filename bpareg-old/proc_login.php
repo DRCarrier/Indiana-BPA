@@ -41,8 +41,7 @@
     if ($login && $login['username'] == $username && $login['password3'] == $password3) {
         echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
         echo '<form name="form1" method="post" action="index-text-main.php">';
-        //echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
-        echo "<input type=\"hidden\" name=\"school_number\" value=\" $_SESSION["school_number"]\">";
+        echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
         echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
         echo '</form>';
     } else {
