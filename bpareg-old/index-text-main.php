@@ -6,21 +6,17 @@
 </head> 
  
 <body bgcolor="#FFFFFF" text="#494949" link="#0a57bf" vlink="#0a57bf" alink="#000000">
+ 
+ 
+<?php 
+//Allows the session varianle to be used
  session_start();
  if(isset($_SESSION["school_number"])){
   
  }else{header("Location: /new/error.php");
  }
  
-<?php 
-//Allows the session varianle to be used
- //session_start();
- //if(isset($_SESSION["school_number"])){
-  
- //}else{header("Location: /new/error.php");
- //}
- 
-//$school_number=$_POST['school_number'];
+$school_number=$_POST['school_number'];
 
 
 ?>
