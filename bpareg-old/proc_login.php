@@ -24,11 +24,11 @@
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // perform update query
-    $query = "UPDATE `login` SET `password3` =  :password WHERE `username` = :username";
-    $stmt = $con->prepare($query);
-    $stmt->bindParam(':password', $password3);
-    $stmt->bindParam(':username', $username);
-    $stmt->execute();
+  //  $query = "UPDATE `login` SET `password3` =  :password WHERE `username` = :username";
+   // $stmt = $con->prepare($query);
+  //  $stmt->bindParam(':password', $password3);
+   // $stmt->bindParam(':username', $username);
+   // $stmt->execute();
 
     // fetch login details for verification
     $sql2 = "SELECT * FROM login WHERE username = :username";
