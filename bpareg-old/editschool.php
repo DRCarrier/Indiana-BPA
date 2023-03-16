@@ -8,9 +8,9 @@ body {
 <title>SLC Registration</title>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
 <?php 
-$school_number=$_GET['school_number'];
-
-if ($school_number) {  include ('editschool-text.php'); }
+//$school_number=$_GET['school_number'];
+session_start();
+if (isset($_SESSION["school_number"])) {  include ('editschool-text.php'); }
 
 
 
@@ -18,6 +18,6 @@ if ($school_number) {  include ('editschool-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
