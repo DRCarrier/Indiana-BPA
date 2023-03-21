@@ -51,7 +51,7 @@
    // $stmt->execute();
 
     // fetch login details for verification
-   $sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :password3";
+   $sql2 = "SELECT * FROM login WHERE username = :username AND password2 = :password2";
 $stmt2 = $con->prepare($sql2);
 $stmt2->bindParam(':username', $username);
 $stmt2->bindParam(':password2', $password2);
