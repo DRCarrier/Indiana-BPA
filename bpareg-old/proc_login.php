@@ -8,7 +8,7 @@
     
     <?php
     
-    $password2 = $_POST['password2'];
+    $password3 = $_POST['password3'];
     $username = $_POST['username'];
     $school_number = $_POST['username'];
    
@@ -51,15 +51,15 @@
    // $stmt->execute();
 
     // fetch login details for verification
-   $sql2 = "SELECT * FROM login WHERE username = :username AND password2 = :password2";
+   $sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :password3";
 $stmt2 = $con->prepare($sql2);
 $stmt2->bindParam(':username', $username);
-$stmt2->bindParam(':password2', $password2);
+$stmt2->bindParam(':password3', $password3);
 $stmt2->execute();
 $login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     // check if login details are correct
-    if ($login && $login['username'] == $username && $login['password2'] == $password2) {
+    if ($login && $login['username'] == $username && $login['password3'] == $password3) {
         //Creates a session variable
     session_start();
     $_SESSION["school_number"]= $username;
@@ -74,7 +74,7 @@ $login = $stmt2->fetch(PDO::FETCH_ASSOC);
     } else {
         echo '<font face="Arial, Helvetica, sans-serif"><b>The username and/or password do not match what we have in our records. Please click the BACK button on your browser and try again. If you do not remember your username and/or password email <a href="mailto:mccloudtr@mvschool.org">Tina McCloud</a></b></font>';
         echo $username;
-        echo $password2;
+        echo $password3;
         
         
         
