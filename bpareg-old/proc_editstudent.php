@@ -1,6 +1,7 @@
 <?php
+session_start();
 $id_num=$_POST['id_num'];
-$school_number=$_POST['school_number'];
+$school_number=$_SESSION['school_number'];
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $cont1=$_POST['cont1'];
@@ -14,7 +15,7 @@ $opens=$_POST['opens'];
 $torch=$_POST['torch'];
 $merit=$_POST['merit'];
 
-header ("Location: /SLCReg/studentlist.php?school_number=$school_number");
+header ("Location: /new/studentlist.php?school_number=$school_number");
 echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 
 
