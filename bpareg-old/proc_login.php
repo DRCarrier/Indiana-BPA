@@ -54,7 +54,7 @@
     $sql2 = "SELECT * FROM login WHERE username = :username";
     $stmt2 = $con->prepare($sql2);
     $stmt2->bindParam(':username', $username);
-    //$stmt2->bindParam(':password3', $password3);
+    $stmt2->bindParam(':password3', $password3);
     $stmt2->execute();
     $login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
