@@ -51,12 +51,12 @@
    // $stmt->execute();
 
     // fetch login details for verification
-    $sql2 = "SELECT * FROM login WHERE username = :username";
-    $stmt2 = $con->prepare($sql2);
-    $stmt2->bindParam(':username', $username);
-    $stmt2->bindParam(':password', $password3);
-    $stmt2->execute();
-    $login = $stmt2->fetch(PDO::FETCH_ASSOC);
+   $sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :password3";
+$stmt2 = $con->prepare($sql2);
+$stmt2->bindParam(':username', $username);
+$stmt2->bindParam(':password3', $password3);
+$stmt2->execute();
+$login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     // check if login details are correct
     if ($login && $login['username'] == $username && $login['password3'] == $password3) {
