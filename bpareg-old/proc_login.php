@@ -41,7 +41,7 @@
     $dbpassword = "Planetary533TrollOhm";
     $dbname = "bpareg"; // fixed: added the database name to be used
     $con = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
-    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // perform update query
   //  $query = "UPDATE `login` SET `password3` =  :password WHERE `username` = :username";
