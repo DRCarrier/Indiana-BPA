@@ -7,13 +7,11 @@
 <body>
     
     <?php
-    //Creates a session variable
-    session_start();
     
     $password3 = $_POST['password3'];
     $username = $_POST['username'];
     $school_number = $_POST['username'];
-    $_SESSION["school_number"]= $username;
+   
 
     //hash password
     $password = '$password3';
@@ -62,11 +60,17 @@
 
     // check if login details are correct
     if ($login && $login['username'] == $username && $login['password3'] == $password3) {
-        echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
-        echo '<form name="form1" method="post" action="index-text-main.php">';
-        echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
-        echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
-        echo '</form>';
+        //Creates a session variable
+    session_start();
+    $_SESSION["school_number"]= $username;
+    header("Location:/new/index-text-main.php");
+        //echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
+        //echo '<form name="form1" method="post" action="index-text-main.php">';
+        //echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
+        //echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
+        //echo '</form>';
+
+
     } else {
         echo '<font face="Arial, Helvetica, sans-serif"><b>The username and/or password do not match what we have in our records. Please click the BACK button on your browser and try again. If you do not remember your username and/or password email <a href="mailto:mccloudtr@mvschool.org">Tina McCloud</a></b></font>';
     }
