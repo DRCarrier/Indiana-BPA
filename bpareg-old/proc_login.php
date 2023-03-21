@@ -8,7 +8,7 @@
     
     <?php
     
-    $password3 = $_POST['password2'];
+    $password2 = $_POST['password2'];
     $username = $_POST['username'];
     $school_number = $_POST['username'];
    
