@@ -1,5 +1,6 @@
 <?php
-$school_number=$_POST['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $completed=$_POST['completed'];
 $advisors=$_POST['advisors'];
 $students=$_POST['students'];
@@ -21,6 +22,6 @@ $sql = "UPDATE SLCschl SET completed='$completed', advisors='$advisors', chapero
 //$query = mysql_query($sql) or die(mysql_error());
 $query = $con->query($sql) or die($con->errorInfo());
 
-header ("Location: /SLCReg/index.php?school_number=$school_number");
+header ("Location: /new/index-text-main.php?school_number=$school_number");
 
 ?>
