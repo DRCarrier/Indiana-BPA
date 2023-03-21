@@ -6,12 +6,25 @@
 </head> 
  
 <body bgcolor="#FFFFFF" text="#494949" link="#0a57bf" vlink="#0a57bf" alink="#000000">
+ 
+ 
 <?php 
+ session_start();
+ ?>
+ 
 
-$school_number=$_POST['school_number'];
+ 
+ 
 
-
+<?php
+if(isset($_SESSION["school_number"])){
+  
+}else{header("Location: /new/error.php");
+ }
+ $school_number=$_POST['school_number'];
 ?>
+ 
+ 
 
 
 
@@ -29,7 +42,7 @@ $school_number=$_POST['school_number'];
 <ul> 
   <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="instructions.php" target="_blank">Instructions</a></font></li> 
 
-  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="slc-checklist.pdf" target="_blank">SLC Registration Checklist</a></font></li>
+  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="checklist.pdf" target="_blank">SLC Registration Checklist</a></font></li>
 
 <!--  <li><font size="+1" face="Arial, Helvetica, sans-serif"><a href="slc-preview.pdf" target="_blank">SLC Preview</a></font></li>    -->
 
@@ -52,7 +65,8 @@ $school_number=$_POST['school_number'];
   
 <p><font face="Arial, Helvetica, sans-serif" >  <font color="#2063f9"> <a href="schoolinfo.php<?php  echo "?school_number=$school_number";  ?>">Enter School Information</a></p> 
   
- <p> <a href="editschool.php<?php  echo "?school_number=$school_number"; ?>">Edit School Information</a></p> 
+ <p> <a href="editschool.php<?php  echo "?school_number=$school_number"; ?>">Edit School Information</a></p>
+ 
   
  <p> <a href="advisors.php<?php  echo "?school_number=$school_number";  ?>">Enter Advisor(s)/Chaperone(s) Information</a></p>
   
