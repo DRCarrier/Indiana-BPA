@@ -9,8 +9,8 @@ body {
 <body text="#000000" link="#FF0000" vlink="#FF0000">
 
 <?php 
-
-$school_number=$_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $id_num=$_GET['id_num'];
 ?>
 
