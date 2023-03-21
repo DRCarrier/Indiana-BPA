@@ -20,7 +20,7 @@
     echo $hashed_password;
 
 
-    Verify hashed password
+    //Verify hashed password
     $password = 'password3';
     $hashed_password = 'password';
     
