@@ -15,6 +15,28 @@
     $school_number = $_POST['username'];
     $_SESSION["school_number"]= $username;
 
+    //hash password
+    $password = '$password3';
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    echo $hashed_password;
+
+
+    //Verify hashed password
+    $password = 'password3';
+    $hashed_password = 'password';
+    
+    if (password_verify($password, $hashed_password)) {
+      echo 'Password is valid!';
+    } else {
+      echo 'Invalid password.';
+    }
+
+
+
+
+
+
     // establish database connection
     $servername = "localhost";
     $dbusername = "bpareg"; 
