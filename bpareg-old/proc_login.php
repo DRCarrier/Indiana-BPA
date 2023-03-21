@@ -56,7 +56,7 @@
     $stmt2->bindParam(':username', $username);
     //$stmt2->bindParam(':password3', $password3);
     $stmt2->execute();
-    //$login = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     // check if login details are correct
     if ($login && $login['username'] == $username && $login['password3'] == $password3) {
