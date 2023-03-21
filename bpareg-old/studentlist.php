@@ -79,6 +79,6 @@ $student_block .= "</table>";
 <br><br>
 <?php echo "$student_block"; ?>
 <br>
-<a href="/SLCReg/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
+<a href="/new/index-text-main.php<?php echo "?school_number=$school_number"; ?>">Home</a>
 </body>
 </html>
