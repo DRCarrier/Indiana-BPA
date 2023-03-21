@@ -1,5 +1,6 @@
 <?php
-$school_number=$_POST['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $address=$_POST['address'];
 $city=$_POST['city'];
 $zip=$_POST['zip'];
@@ -35,6 +36,6 @@ $sql = "UPDATE SLCschl SET address='$address', city='$city', zip='$zip', arrive=
 //$query = mysql_query($sql) or die(mysql_error());
 query = $con->query($sql) or die($con->errorInfo());
 
-header ("Location: /SLCReg/index.php?school_number=$school_number");
+header ("Location: /new/index-text-main.php?school_number=$school_number");
 
 ?>
