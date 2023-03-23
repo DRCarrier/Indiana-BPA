@@ -13,7 +13,7 @@
     $school_number = $_POST['username'];
    
 
-    //hash password
+    // create hash password
     $password = '$password3';
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
