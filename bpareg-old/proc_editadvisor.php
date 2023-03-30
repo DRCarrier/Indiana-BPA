@@ -1,7 +1,8 @@
 
 <?php //lets you edit an advisor
+session_start();
 $adv_id=$_POST['adv_id'];
-$school_number=$_POST['school_number'];
+$school_number=$_SESSION['school_number'];
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
 $sphone=$_POST['sphone'];
@@ -14,11 +15,10 @@ $SameAssignment=$_POST['SameAssignment'];
 $AssignmentComment=$_POST['AssignmentComment'];
 
 
-header ("Location: /SLCReg/advisorlist.php?school_number=$school_number");
+header ("Location: /new/advisorlist.php?school_number=$school_number");
 echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 
-//$con = mysql_connect('server','username','password');
-//$db = mysql_select_db('database', $con);
+
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
