@@ -13,7 +13,7 @@
 <?php $password=$_POST['password'];
 $password2=$_POST['password2'];
 $username=$_POST['username'];
-$school_number=$_POST['username'];
+$school_number=$_SESSION['school_number'];
 ?>
 
 
