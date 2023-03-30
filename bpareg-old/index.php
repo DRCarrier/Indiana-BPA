@@ -9,7 +9,8 @@
 0000">
 <?php
 //gets school number
-$school_number=$_POST['school_number'];
+ session_start();
+$school_number= $_SESSION[‘school_number’];
 ?>
 
 
