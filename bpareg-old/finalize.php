@@ -18,6 +18,6 @@ if ($school_number) {  include ('finalize-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
