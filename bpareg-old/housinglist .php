@@ -1,5 +1,5 @@
 <?php
- session_start();
+
 print_r($_SESSION);
 $school_number=$_SESSION['school_number']; 
 $delete = isset($_GET['delete']) ? true : false;
