@@ -78,6 +78,6 @@ $advisor_block .= "</table>";
 <br><br>
 <?php echo "$advisor_block"; ?>
 <br>
-<a href="/SLCReg/index-text-main.php<?php echo "?school_number=$school_number"; ?>">Home</a>
+<a href="/new/index-text-main.php<?php echo "?school_number=$school_number"; ?>">Home</a>
 </body>
 </html>
