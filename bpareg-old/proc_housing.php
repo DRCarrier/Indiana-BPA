@@ -23,7 +23,7 @@ $sql = "INSERT INTO housing (`school_number`, `a_s`, `gender`, `type`, `occ_id1`
 
 $query = $con->query($sql) or die($con->errorInfo());
 
-if ($finished) { header("Location: /new/index.php?school_number=$school_number"); }
+if ($finished) { header("Location: /new/index-text-main.php?school_number=$school_number"); }
 if ($addanother) { header("Location: /new/housing.php?school_number=$school_number"); }
 
 ?>
