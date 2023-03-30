@@ -56,7 +56,7 @@ $housing_block .= "<td><a href=\"housinglist.php?school_number=$school_number&ro
 $housing_block .= "</tr>";
 
  //$housing = mysql_fetch_array($result);
-$housing = $results->fetch(PDO::FETCH_BOTH);
+$housing = $result->fetch(PDO::FETCH_BOTH);
 }
 
 
