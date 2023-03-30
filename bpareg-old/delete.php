@@ -12,7 +12,8 @@
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#0000FF" alink="#0000FF">
 <?php
 $adv_id=$_POST['adv_id'];
-$school_number=$_POST['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $delete=$_POST['delete'];
 ?>
 
