@@ -8,7 +8,8 @@ body {
 <title>SLC Registration</title>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
 <?php 
-$school_number=$_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 
 ?>
 
@@ -36,8 +37,6 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 <tr><td>Address: </td> <td><input type=\"text\" name=\"address\" value=\"$school[address]\"></td></tr> 
 <tr><td>City: </td><td><input type=\"text\" name=\"city\" value=\"$school[city]\"></td></tr>
 <tr><td>Zip: </td><td><input type=\"text\" name=\"zip\" value=\"$school[zip]\"></td></tr>
-<tr><td>Arrival Time on Sunday: </td><td><input type=\"text\" name=\"arrive\" value=\"$school[arrive]\"></td></tr> 
-<tr><td>Departure Time on Tuesday: </td><td> <input type=\"text\" name=\"depart\" value=\"$school[depart]\"></td></tr>
 \n
 <tr><td>Environmental Action/Awareness: </td><td> <input type=\"checkbox\" name=\"envact\" value=\"y\""; if ($school[envact]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school[safety]) { echo " checked=\"checked\""; } echo "></td></tr>\n
@@ -56,7 +55,9 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 ";  
 	
 /*
-Code taken out of form above:
+Removed unused variables:
+<tr><td>Arrival Time on Sunday: </td><td><input type=\"text\" name=\"arrive\" value=\"$school[arrive]\"></td></tr> 
+<tr><td>Departure Time on Tuesday: </td><td> <input type=\"text\" name=\"depart\" value=\"$school[depart]\"></td></tr>
 <tr><td>Overflow Housing at Spring Hill Suites: </td><td> <input type=\"checkbox\" name=\"overflowSH\" value=\"y\""; if ($school[overflowSH]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Chapter Activities Award of Excellence: </td><td><input type=\"checkbox\" name=\"chact\" value=\"y\""; if ($school[chact]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Other: </td><td><input type=\"text\" name=\"other_recog\" value=\"$school[other_recog]\"></td></tr>
