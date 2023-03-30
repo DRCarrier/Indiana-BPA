@@ -8,7 +8,7 @@ body {
 <title>SLC Registration</title>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
 <?php 
-session_start();
+//session_start();
 $school_number=$_SESSION['school_number'];
 
 ?>
