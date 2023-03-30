@@ -29,7 +29,7 @@ $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
 $result = $con->query($sql) or die($con->errorInfo());
 $temp = $result->fetch(PDO::FETCH_ASSOC);
 
-
+print $temp;
 $school_name = $temp[school_name];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
