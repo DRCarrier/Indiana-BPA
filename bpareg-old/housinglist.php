@@ -44,7 +44,7 @@ $housing_block .= "</tr>";
 while ($housing) {
 
 $housing_block .= "<tr>";
-$housing_block .= "<td><a href=\"/SLCReg/edithousing.php?room_id=$housing[room_id] & school_number=$housing[school_number]\">$housing[room_id]</a></td>";
+$housing_block .= "<td><a href=\"/new/edithousing.php?room_id=$housing[room_id] & school_number=$housing[school_number]\">$housing[room_id]</a></td>";
 $housing_block .= "<td>$housing[a_s]</td>";
 $housing_block .= "<td>$housing[gender]</td>";
 $housing_block .= "<td>$housing[type]</td>";
