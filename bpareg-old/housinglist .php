@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 print_r($_SESSION);
 $school_number=$_SESSION['school_number']; 
 $delete = isset($_GET['delete']) ? true : false;
@@ -7,34 +7,23 @@ $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
 
  
 
-//$con = mysql_connect('server','username','password');
-//$db = mysql_select_db('database', $con);
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if ($delete && $room_id > 0) {
-//mysql_query("delete from housing where room_id='$room_id'");
 $con->query("delete from housing where room_id='$room_id'");
 }
 
 $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
-//$result = mysql_query($sql) or die(mysql_error());
-//$temp = mysql_fetch_array($result);
 $result = $con->query($sql) or die($con->errorInfo());
 $temp = $result->fetch(PDO::FETCH_ASSOC);
-
-print $school_number;
-print $temp;
-$school_name = $temp[school_name];
+$school_name = $temp['school_name'];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
-//$result = mysql_query($sql) or die(mysql_error());
-//$housing = mysql_fetch_array($result);
 $result = $con->query($sql) or die($con->errorInfo());
 $housing = $result->fetch(PDO::FETCH_BOTH);
 
@@ -85,6 +74,6 @@ $housing_block .= "</table>";
 <h2><?php echo "<font face=\"Arial, Helvetica, sans-serif\">$school_name - $school_number </font>"; ?>
 <?php echo "$housing_block"; ?>
 <br>
-<a href="/new/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
+<a href="/new/index-text-main.php<?php echo "?school_number=$school_number"; ?>">Home</a>
 </body>
 </html>
