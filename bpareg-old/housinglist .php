@@ -1,7 +1,8 @@
 <?php
 session_start();
-print_r($_SESSION);
+
 $school_number=$_SESSION['school_number']; 
+print_r($_SESSION);
 $delete = isset($_GET['delete']) ? true : false;
 $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
 
