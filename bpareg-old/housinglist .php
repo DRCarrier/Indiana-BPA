@@ -1,5 +1,5 @@
 <?php
- 
+ session_start();
 $school_number=$_SESSION['school_number']; 
 $delete = isset($_GET['delete']) ? true : false;
 $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
@@ -30,7 +30,7 @@ $result = $con->query($sql) or die($con->errorInfo());
 $temp = $result->fetch(PDO::FETCH_BOTH);
 
 
-$school_name = $temp[school_name];
+$school_name = $temp['school_name'];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
 //$result = mysql_query($sql) or die(mysql_error());
