@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+echo session_id();
 $school_number=$_SESSION['school_number']; 
 print_r($_SESSION);
 $delete = isset($_GET['delete']) ? true : false;
