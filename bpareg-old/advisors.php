@@ -6,8 +6,8 @@
 </head>
 <?php
 
-$school_number=$_GET['school_number'];
-
+session_start();
+$school_number=$_SESSION['school_number'];
 if ($school_number) {  include ('advisors-text.php'); }
 
 
