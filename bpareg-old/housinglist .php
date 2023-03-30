@@ -85,6 +85,6 @@ $housing_block .= "</table>";
 <h2><?php echo "<font face=\"Arial, Helvetica, sans-serif\">$school_name - $school_number </font>"; ?>
 <?php echo "$housing_block"; ?>
 <br>
-<a href="/SLCReg/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
+<a href="/new/index.php<?php echo "?school_number=$school_number"; ?>">Home</a>
 </body>
 </html>
