@@ -39,7 +39,7 @@ $student_block .= "<td>Officer</br>Candidate</td>";
 $student_block .= "<td>Voting</br>Delegate</td>";
 $student_block .= "<td>Torch</br>Awards</td>";
 $student_block .= "<td>Open Contests</br>Only</td>";
-$student_block .= "<td>Merit</br>Scholar</td>";
+//$student_block .= "<td>Merit</br>Scholar</td>";
 $student_block .= "<td>Delete</td>";
 $student_block .= "</tr>";
 
@@ -57,7 +57,7 @@ while ($student) {
 	$student_block .= "<td>$student[vdelegate]</td>";
 	$student_block .= "<td>$student[torch]</td>";
 	$student_block .= "<td>$student[opens]</td>";
-	$student_block .= "<td>$student[merit]</td>";
+	//$student_block .= "<td>$student[merit]</td>";
 	$student_block .= "<td><a href=\"studentlist.php?school_number=$school_number&id_num=$student[id_num]&delete=1\">Delete?</a></td>";
 	$student_block .= "</tr>";
 
