@@ -6,7 +6,8 @@
 </head>
 <?php 
 
-$school_number=$_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 
 ?>
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000" vlink="#FF0000">
