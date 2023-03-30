@@ -6,7 +6,7 @@
 </head>
 <?php 
 
-session_start();
+
 $school_number=$_SESSION['school_number'];
 
 ?>
