@@ -8,7 +8,7 @@
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000" vlink="#FF0000" alink="#FF
 0000">
 <?php 
-
+session_start();
 $school_number=$_SESSION['school_number'];
 ?>
 //gets school number
