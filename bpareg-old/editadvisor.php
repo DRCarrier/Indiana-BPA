@@ -10,7 +10,8 @@ body {
 
 <?php 
 
-$school_number=$_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $adv_id=$_GET['adv_id'];
 ?>
 
