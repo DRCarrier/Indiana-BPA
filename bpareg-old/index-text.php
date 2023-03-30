@@ -7,7 +7,7 @@
  
 <body bgcolor="#FFFFFF" text="#494949" link="#0a57bf" vlink="#0a57bf" alink="#000000">
 <?php 
-
+session_start();
 $school_number=$_SESSION['school_number'];
 
 
