@@ -8,8 +8,8 @@
 <body bgcolor="#FFFFFF" text="#494949" link="#0a57bf" vlink="#0a57bf" alink="#FF
 0000">
 <?php
-
-$school_number=$_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 
 if ($school_number) {  include ('index-text.php'); }
 
@@ -19,7 +19,7 @@ if ($school_number) {  include ('index-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
 
