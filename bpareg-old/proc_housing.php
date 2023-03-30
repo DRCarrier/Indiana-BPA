@@ -1,6 +1,6 @@
 <?php
 
-$school_number=$_POST['school_number'];
+$school_number=$_SESSION['school_number'];
 $a_s=$_POST['a_s'];
 $gender=$_POST['gender'];
 $type=$_POST['type'];
