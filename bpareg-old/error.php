@@ -15,7 +15,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 
 <?php
 
-$school_number=$_GET['school_number'];
+$school_number=$_SESSION['school_number'];
 
 ?>
     <h2>Please return to the <a href="http://indianabpa.org/slcReg.php">SLC registration login page </a>to create and/or log into your account.
