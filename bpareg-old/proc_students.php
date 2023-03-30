@@ -27,7 +27,7 @@ $sql = "INSERT INTO students (`id_num`, `school_number`, `fname`, `lname`, `cont
 
 $query = $con->query($sql) or die($con->errorInfo());
 
-if ($finished) { header("Location: /SLCReg/index.php?school_number=$school_number"); }
-if ($addanother) { header("Location: /SLCReg/students.php?school_number=$school_number"); }
+if ($finished) { header("Location: /new/index.php?school_number=$school_number"); }
+if ($addanother) { header("Location: /new/students.php?school_number=$school_number"); }
 
 ?>
