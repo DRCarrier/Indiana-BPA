@@ -1,7 +1,7 @@
 //let syou edit housing info (connects to database)
 <?php
 $room_id=$_POST['room_id'];
-$school_number=$_POST['school_number'];
+$school_number=$_SESSION['school_number'];
 $a_s=$_POST['a_s'];
 $gender=$_POST['gender'];
 $type=$_POST['type'];
@@ -11,7 +11,7 @@ $occ_id3=$_POST['occ_id3'];
 $occ_id4=$_POST['occ_id4'];
 
 
-header ("Location: /SLCReg/housinglist.php?school_number=$school_number");
+header ("Location: /new/housinglist.php?school_number=$school_number");
 echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 
 
