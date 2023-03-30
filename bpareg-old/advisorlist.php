@@ -1,5 +1,6 @@
 <?php
-$school_number = $_GET['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $delete = isset($_GET['delete']) ? true : false;
 $adv_id = isset($_GET['adv_id']) ? $_GET['adv_id'] : 0;
 
