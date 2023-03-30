@@ -20,7 +20,7 @@ $con->query("delete from housing where room_id='$room_id'");
 
 $sql = "SELECT school_name FROM schools WHERE school_number = '$school_number'";
 $result = $con->query($sql) or die($con->errorInfo());
-$temp = $result->fetch(PDO::FETCH_ASSOC);
+$temp = $result->fetch(PDO::FETCH_BOTH);
 $school_name = $temp['school_name'];
 
 $sql = "SELECT * FROM housing WHERE school_number = '$school_number'";
