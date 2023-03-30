@@ -179,12 +179,15 @@ echo "
 <tr><td>Voting Delegate: </td><td> <input type=\"checkbox\" name=\"vdelegate\" value=\"y\""; if ($student[vdelegate]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Torch Awards: </td><td> <input type=\"checkbox\" name=\"torch\" value=\"y\""; if ($student[torch]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Open Contests Only: </td><td> <input type=\"checkbox\" name=\"opens\" value=\"y\""; if ($student[opens]) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Merit Scholar: </td><td> <input type=\"checkbox\" name=\"merit\" value=\"y\""; if ($student[merit]) { echo " checked=\"checked\""; } echo "></td></tr>\n
+
 
 </table>
 <input type=\"hidden\" name=\"school_number\" value=\"$school_number\">
 <input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 <input type=\"submit\" value=\"Save Changes\">
 ";
-
+	
+/* Removed unused variables:
+<tr><td>Merit Scholar: </td><td> <input type=\"checkbox\" name=\"merit\" value=\"y\""; if ($student[merit]) { echo " checked=\"checked\""; } echo "></td></tr>\n
+*/
  ?>
