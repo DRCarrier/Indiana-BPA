@@ -11,10 +11,10 @@ body {
 -->
 </style></head>
 <?php
+seesion_start();
+$school_number=$_SESSION['school_number'];
 
-$school_number=$_GET['school_number'];
-
-if ($school_number) {  include ('students-text.php'); }
+if (isset($school_number)) {  include ('students-text.php'); }
 
 
 
@@ -22,7 +22,7 @@ if ($school_number) {  include ('students-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
 
