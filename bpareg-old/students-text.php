@@ -12,7 +12,7 @@ body {
 </style></head>
 <?php 
 
-$school_number=$_GET['school_number'];
+$school_number=$_SESSION['school_number'];
 
 ?>
 <body text="#000000" link="#FF0000" vlink="#FF0000">
@@ -167,6 +167,16 @@ $school_number=$_GET['school_number'];
 </select>
         </label></td>
       </tr>
+      <tr> 
+      <td height="27"><font face="Times New Roman, Times, serif">Gender</font></td>
+      <td><font face="Times New Roman, Times, serif">
+        <select name="gender" id="gender">
+          <option></option>
+          <option value="m">Male</option>
+          <option value="f">Female</option>
+          </select>
+      </font></td></tr>
+	    
       <tr>
         <td colspan="4">Shirt Size: <font face="Times New Roman, Times, serif">
           <select name="size" id="size">
