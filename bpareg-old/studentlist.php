@@ -33,6 +33,7 @@ $student_block = "<table border=\"1\">";
 $student_block .= "<td>ID Number</td>";
 $student_block .= "<td>First Name</td>";
 $student_block .= "<td>Last Name</td>";
+$student_block .= "<td>Gender</td>";
 $student_block .= "<td>Contest 1</td>";
 $student_block .= "<td>Contest 2</td>";
 $student_block .= "<td>Shirt Size</td>";
@@ -51,6 +52,7 @@ while ($student) {
 	$student_block .= "<td><a href=\"editstudent.php?id_num=$student[id_num]&school_number=$student[school_number]\">$student[id_num]</a></td>";
 	$student_block .= "<td>$student[fname]</td>";
 	$student_block .= "<td>$student[lname]</td>";
+	$student_block .= "<td>$student[gender]</td>";
 	$student_block .= "<td>$student[cont1]</td>";
 	$student_block .= "<td>$student[cont2]</td>";
 	$student_block .= "<td>$student[size]</td>";
