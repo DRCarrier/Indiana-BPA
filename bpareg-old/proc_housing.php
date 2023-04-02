@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $school_number=$_SESSION['school_number'];
 $a_s=$_POST['a_s'];
 $gender=$_POST['gender'];
