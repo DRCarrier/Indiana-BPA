@@ -5,10 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 <?php 
+session_start();
+$school_number=$_SESSION['school_number'];
 
-$school_number=$_GET['school_number'];
-
-if ($school_number) {  include ('housing-text.php'); }
+if (isset($school_number)) {  include ('housing-text.php'); }
 
 
 
@@ -16,7 +16,7 @@ if ($school_number) {  include ('housing-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
 </body>
