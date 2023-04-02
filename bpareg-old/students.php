@@ -11,7 +11,7 @@ body {
 -->
 </style></head>
 <?php
-seesion_start();
+session_start();
 $school_number=$_SESSION['school_number'];
 
 if (isset($school_number)) {  include ('students-text.php'); }
