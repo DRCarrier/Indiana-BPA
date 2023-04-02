@@ -8,9 +8,9 @@
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000">
 <?php 
 
-$school_number=$_GET['school_number'];
+$school_number=$_SESSION['school_number'];
 
-if ($school_number) {  include ('schoolinfo-text.php'); }
+if (isset($school_number)) {  include ('schoolinfo-text.php'); }
 
 
 
@@ -18,7 +18,7 @@ if ($school_number) {  include ('schoolinfo-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 ?>
 </body>
 </html>
