@@ -22,7 +22,7 @@ $quality=$_POST['quality'];
 $accommodations=$_POST['accommodations'];
 
 ?>
-<form name="form1" method="post" action="index.php<?php echo "?school_number=$school_number"; ?>">
+<form name="form1" method="post" action="index-text-main.php<?php echo "?school_number=$school_number"; ?>">
 
 <?php
 
@@ -34,8 +34,10 @@ $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-$query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`, `arrive`, `depart`,  `overflowSH`, `envact`, `community`, `olympics`, `safety`, `chact`, `service`, `member`, `quality`, `social`, `marketing`, `other_recog`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', '$arrive', '$depart', '$overflowSH', '$envact', '$community', '$olympics', '$safety', '$chact', '$service', '$member', '$quality', '$social', '$marketing', '$other_recog', '$accommodations', NOW(), NOW())";
-
+$query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`,`envact`, `community`, `olympics`, `safety`, `service`, `member`, `quality`, `social`, `marketing`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', '$envact', '$community', '$olympics', '$safety', '$service', '$member', '$quality', '$social', '$marketing', '$accommodations', NOW(), NOW())";
+/* Removed code from query:
+ `arrive`, `depart`,  `overflowSH`,  `chact`,  `other_recog`, 
+*/
 			//$query2="SELECT school_number FROM SLCschl WHERE school_number ='$school_number'"; 
 			$query2="SELECT COUNT(*) FROM SLCschl WHERE school_number ='$school_number'";
 			$result=@$con->query($query2);
