@@ -8,7 +8,7 @@
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000">
 <?php
 
-$school_number=$_GET['school_number'];
+$school_number=$_SESSION['school_number'];
 ?>
 <table width="87%" align="center">
   <tr> 
@@ -44,7 +44,7 @@ $school_number=$_GET['school_number'];
   </table>
   <br>
   <br>
-  <table width="40%" border="0" align="center" cellpadding="0">
+  <!-- <table width="40%" border="0" align="center" cellpadding="0">
     <tr>
       <td ><font face="Times New Roman, Times, serif">Arrival Time on Sunday:<br>
       </font></td>
@@ -58,7 +58,8 @@ $school_number=$_GET['school_number'];
   <br>
 
 
-  <table width="50%" border="0" align="center" cellpadding="0">
+  <table width="50%" border="0" align="center" cellpadding="0"> 
+-->
  
 <!--   <tr>
 
@@ -98,26 +99,28 @@ $school_number=$_GET['school_number'];
         <input name="community" type="checkbox" id="community" value="y">
         </font></td>
 </tr>
-<tr>
+<!--<tr>
 
       <td width="85%" ><font face="Times New Roman, Times, serif"><ul>Chapter Activities Award of Excellence</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif"> 
         <input name="chact" type="checkbox" id="chact" value="y">
         </font></td>
     </tr>
+-->
     <tr>
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Special Olympics Award</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
         <input name="olympics" type="checkbox" id="olympics" value="y">
         </font></td>
 </tr>
-<tr>
+<!--<tr>
 
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Service Learning Individual Award</ul> </font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
         <input name="service" type="checkbox" id="red_cross2" value="y">
         </font></td>
     </tr>
+-->
     <tr>
       <td width="85%"><ul>Social Media Award</ul></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
@@ -145,13 +148,14 @@ $school_number=$_GET['school_number'];
         </font></td>
     </tr>
 </table>
-<table align="center">    <tr> 
+<!-- <table align="center">    <tr> 
       <td width="15%"><font face="Times New Roman, Times, serif">Other</font></td>
       <td width="85%"><font face="Times New Roman, Times, serif"> 
         <input name="other_recog" type="text" id="other_recog" size="70">
         </font></td>
     </tr>
   </table>
+-->
   <p align="left"><font face="Times New Roman, Times, serif">If you or your students 
     need any special accommodations or housing arrangements during the conference, 
   indicate them below.</font></p>
