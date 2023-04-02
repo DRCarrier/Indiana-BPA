@@ -43,7 +43,7 @@ chact='$chact'
 other_recog='$other_recog'
 */
 
-query = $con->query($sql) or die($con->errorInfo());
+$query = $con->query($sql) or die($con->errorInfo());
 
 header ("Location: /new/index-text-main.php?school_number=$school_number");
 
