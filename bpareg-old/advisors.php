@@ -8,7 +8,7 @@
 
 session_start();
 $school_number=$_SESSION['school_number'];
-if ($school_number) {  include ('advisors-text.php'); }
+if (isset($school_number)) {  include ('advisors-text.php'); }
 
 
 
@@ -16,7 +16,7 @@ if ($school_number) {  include ('advisors-text.php'); }
 
 
 
-	{header("Location: /SLCReg/error.php"); }
+	{header("Location: /new/error.php"); }
 
 ?>
 </body>
