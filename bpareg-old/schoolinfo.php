@@ -7,7 +7,7 @@
 
 <body bgcolor="#FFFFFF" text="#000000" link="#FF0000">
 <?php 
-
+session_start();
 $school_number=$_SESSION['school_number'];
 
 if (isset($school_number)) {  include ('schoolinfo-text.php'); }
