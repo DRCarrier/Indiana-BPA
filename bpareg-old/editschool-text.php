@@ -50,7 +50,6 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 <tr><td>Accommodations: </td><td> <input type=\"text\" name=\"accommodations\" value=\"$school[accommodations]\"></td></tr>
 </table>
 <input type=\"hidden\" name=\"school_number\" value=\"$school_number\">
-<input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 <input type=\"submit\" value=\"Save Changes\">
 ";  
 	
@@ -61,5 +60,7 @@ Removed unused variables:
 <tr><td>Overflow Housing at Spring Hill Suites: </td><td> <input type=\"checkbox\" name=\"overflowSH\" value=\"y\""; if ($school[overflowSH]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Chapter Activities Award of Excellence: </td><td><input type=\"checkbox\" name=\"chact\" value=\"y\""; if ($school[chact]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Other: </td><td><input type=\"text\" name=\"other_recog\" value=\"$school[other_recog]\"></td></tr>
+
+<input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 */
 ?>
