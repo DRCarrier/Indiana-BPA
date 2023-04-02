@@ -39,7 +39,7 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 <tr><td>Zip: </td><td><input type=\"text\" name=\"zip\" value=\"$school[zip]\"></td></tr>
 \n
 <tr><td>Environmental Action/Awareness: </td><td> <input type=\"checkbox\" name=\"envact\" value=\"y\""; if (isset($school['envact'])) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school[safety]) { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school['safety']) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Community Service Award: </td><td> <input type=\"checkbox\" name=\"community\" value=\"y\""; if ($school[community]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Special Olympics Award: </td><td> <input type=\"checkbox\" name=\"olympics\" value=\"y\""; if ($school[olympics]) { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Service Learning Award Individual: </td><td> <input type=\"checkbox\" name=\"service\" value=\"y\""; if ($school[service]) { echo " checked=\"checked\""; } echo "></td></tr>\n
