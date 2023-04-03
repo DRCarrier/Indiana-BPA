@@ -84,7 +84,7 @@ $school_number=$_SESSION['school_number'];
     <tr> 
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Environmental Action/Awareness Award</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
-        <input name="envact" type="hidden" id="envact" value ="">
+        <input name="envact" type="hidden" id="envact" value =null>
         <input name="envact" type="checkbox" id="envact" value="y">
         </font></td>
 </tr>
