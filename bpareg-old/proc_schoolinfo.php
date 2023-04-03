@@ -34,9 +34,9 @@ $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-$query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`,`envact`, `community`, `olympics`, `safety`, `service`, `member`, `quality`, `social`, `marketing`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', '$envact', '$community', '$olympics', '$safety', '$service', '$member', '$quality', '$social', '$marketing', '$accommodations', NOW(), NOW())";
+$query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`, `arrive`, `depart`, `overflowSH`, `envact`, `community`, `olympics`, `safety`, `chact`, `service`, `member`, `quality`, `social`, `marketing`, `other_recog`, `accommodations`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$address', '$city', '$zip', ' ', ' ', ' ', '$envact', '$community', '$olympics', '$safety', ' ', '$service', '$member', '$quality', '$social', '$marketing', ' ', '$accommodations', NOW(), NOW())";
 /* Removed code from query:
- `arrive`, `depart`,  `overflowSH`,  `chact`,  `other_recog`, 
+     
 */
 			//$query2="SELECT school_number FROM SLCschl WHERE school_number ='$school_number'"; 
 			$query2="SELECT COUNT(*) FROM SLCschl WHERE school_number ='$school_number'";
@@ -46,8 +46,7 @@ $query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`,`envact
 	//Previoulsy was: if(mysql_num_rows($result)==0)...
 			if ($count==0) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click Next button to return to the registration home page.</h2></font>'; 
 	$con->query($query);
-	echo $count;
-	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
+		echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
 			else{echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have already entered your school information. If you need to change your information, click the Edit School Information link on the registration home page.  Click the Next button to return to the registration home page.</h2></font>'; 
 			echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";}
 
