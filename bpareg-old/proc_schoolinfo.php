@@ -46,6 +46,7 @@ $query = "INSERT INTO SLCschl (`school_number`, `address`, `city`, `zip`,`envact
 	//Previoulsy was: if(mysql_num_rows($result)==0)...
 			if ($count==0) {echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click Next button to return to the registration home page.</h2></font>'; 
 	$con->query($query);
+	echo $count;
 	echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />"; }
 			else{echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have already entered your school information. If you need to change your information, click the Edit School Information link on the registration home page.  Click the Next button to return to the registration home page.</h2></font>'; 
 			echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";}
