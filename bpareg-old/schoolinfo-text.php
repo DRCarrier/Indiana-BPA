@@ -114,14 +114,13 @@ $school_number=$_SESSION['school_number'];
         <input name="olympics" type="checkbox" id="olympics" value="y">
         </font></td>
 </tr>
-<!--<tr>
+<tr>
 
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Service Learning Individual Award</ul> </font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
         <input name="service" type="checkbox" id="red_cross2" value="y">
         </font></td>
     </tr>
--->
     <tr>
       <td width="85%"><ul>Social Media Award</ul></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
