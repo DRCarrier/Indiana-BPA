@@ -69,6 +69,7 @@ $school_number=$_SESSION['school_number'];
       </font></p></td></tr>
 
 <tr><td width="25%"><ul>Springhill Suites</ul></td><td align="left"><label>
+        <input name="overflowSH" type="hidden" id="overflowSH" value =null>
         <input name="overflowSH" type="checkbox" id="overflowSH" value="y">
       </label></td>
     </tr>
@@ -91,19 +92,22 @@ $school_number=$_SESSION['school_number'];
 <tr>
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Safety Awareness Award</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif"> 
+        <input name="safety" type="hidden" id="safety" value =null>
         <input name="safety" type="checkbox" id="safety" value="y">
         </font></td>
     </tr>
     <tr> 
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Community Service Award</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif"> 
+        <input name="community" type="hidden" id="community" value =null>
         <input name="community" type="checkbox" id="community" value="y">
         </font></td>
 </tr>
 <!--<tr>
 
       <td width="85%" ><font face="Times New Roman, Times, serif"><ul>Chapter Activities Award of Excellence</ul></font></td>
-      <td width="15%"><font face="Times New Roman, Times, serif"> 
+      <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="chact" type="hidden" id="chact" value =null>
         <input name="chact" type="checkbox" id="chact" value="y">
         </font></td>
     </tr>
@@ -111,6 +115,7 @@ $school_number=$_SESSION['school_number'];
     <tr>
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Special Olympics Award</ul></font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="olympics" type="hidden" id="olympics" value =null>
         <input name="olympics" type="checkbox" id="olympics" value="y">
         </font></td>
 </tr>
@@ -118,12 +123,14 @@ $school_number=$_SESSION['school_number'];
 
       <td width="85%"><font face="Times New Roman, Times, serif"><ul>Service Learning Individual Award</ul> </font></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="service" type="hidden" id="red_cross2" value =null>
         <input name="service" type="checkbox" id="red_cross2" value="y">
         </font></td>
     </tr>
     <tr>
       <td width="85%"><ul>Social Media Award</ul></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="social" type="hidden" id="social" value =null>
         <input name="social" type="checkbox" id="social" value="y">
       </font></td>
 </tr>
@@ -131,12 +138,14 @@ $school_number=$_SESSION['school_number'];
 
       <td width="85%"><ul>BPA Marketing &amp; Public Relations Award</ul></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="marketing" type="hidden" id="marketing" value =null>
         <input name="marketing" type="checkbox" id="marketing" value="y">
       </font></td>
     </tr>
     <tr> 
       <td width="85%"><ul>Member Recruiter of the Year Award</ul></td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="member" type="hidden" id="member" value =null>
         <input name="member" type="checkbox" id="member" value="y">
         </font></td>
 </tr>
@@ -144,6 +153,7 @@ $school_number=$_SESSION['school_number'];
 
       <td width="85%"><ul>Quality Chapter Distinction</ul> </td>
       <td width="15%"><font face="Times New Roman, Times, serif">
+        <input name="quality" type="hidden" id="quality" value =null>
         <input name="quality" type="checkbox" id="quality" value="y">
         </font></td>
     </tr>
