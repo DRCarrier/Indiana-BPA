@@ -38,15 +38,15 @@ $school = $query->fetch(PDO::FETCH_BOTH);
 <tr><td>City: </td><td><input type=\"text\" name=\"city\" value=\"$school[city]\"></td></tr>
 <tr><td>Zip: </td><td><input type=\"text\" name=\"zip\" value=\"$school[zip]\"></td></tr>
 \n
-<tr><td>Environmental Action/Awareness: </td><td> <input type=\"checkbox\" name=\"envact\" value=\"y\""; if ($school['envact']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school['safety']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Community Service Award: </td><td> <input type=\"checkbox\" name=\"community\" value=\"y\""; if ($school['community']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Special Olympics Award: </td><td> <input type=\"checkbox\" name=\"olympics\" value=\"y\""; if ($school['olympics']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Service Learning Award Individual: </td><td> <input type=\"checkbox\" name=\"service\" value=\"y\""; if ($school['service']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Member Recruiter Award: </td><td> <input type=\"checkbox\" name=\"member\" value=\"y\""; if ($school['member']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Quality Chapter Distinction: </td><td> <input type=\"checkbox\" name=\"quality\" value=\"y\""; if ($school['quality']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Social Media Award: </td><td> <input type=\"checkbox\" name=\"social\" value=\"y\""; if ($school['social']) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Marketing & Public Relations Award: </td><td> <input type=\"checkbox\" name=\"marketing\" value=\"y\""; if ($school['marketing']) { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Environmental Action/Awareness: </td><td> <input type=\"checkbox\" name=\"envact\" value=\"y\""; if ($school['envact']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Safety Awareness Award: </td><td> <input type=\"checkbox\" name=\"safety\" value=\"y\""; if ($school['safety']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Community Service Award: </td><td> <input type=\"checkbox\" name=\"community\" value=\"y\""; if ($school['community']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Special Olympics Award: </td><td> <input type=\"checkbox\" name=\"olympics\" value=\"y\""; if ($school['olympics']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Service Learning Award Individual: </td><td> <input type=\"checkbox\" name=\"service\" value=\"y\""; if ($school['service']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Member Recruiter Award: </td><td> <input type=\"checkbox\" name=\"member\" value=\"y\""; if ($school['member']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Quality Chapter Distinction: </td><td> <input type=\"checkbox\" name=\"quality\" value=\"y\""; if ($school['quality']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Social Media Award: </td><td> <input type=\"checkbox\" name=\"social\" value=\"y\""; if ($school['social']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Marketing & Public Relations Award: </td><td> <input type=\"checkbox\" name=\"marketing\" value=\"y\""; if ($school['marketing']=="y") { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Accommodations: </td><td> <input type=\"text\" name=\"accommodations\" value=\"$school[accommodations]\"></td></tr>
 </table>
 <input type=\"hidden\" name=\"school_number\" value=\"$school_number\">
