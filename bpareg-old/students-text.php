@@ -201,27 +201,33 @@ $school_number=$_SESSION['school_number'];
       to this student:</strong></td> 
      <tr>
         <td width="46%">Current State Officer</td>
-        <td><input name="officer" type="checkbox" id="officer" value="y"></td>
+        <td><input name="officer" type="hidden" id="officer" value="n">
+	    <input name="officer" type="checkbox" id="officer" value="y"></td>
       </tr>
       <tr>
         <td>State Officer Candidate</td>
-        <td><input name="officer_candidate" type="checkbox" id="officer_candidate" value="y"></td>
+        <td><input name="officer_candidate" type="hidden" id="officer_candidate" value="n">
+	    <input name="officer_candidate" type="checkbox" id="officer_candidate" value="y"></td>
       </tr>
       <tr>
         <td>Voting Delegate</td>
-        <td><input name="vdelegate" type="checkbox" id="vdelegate" value="y"></td>
+        <td><input name="vdelegate" type="hidden" id="vdelegate" value="n">
+	    <input name="vdelegate" type="checkbox" id="vdelegate" value="y"></td>
       </tr>
       <tr>
         <td>Statesman Torch Award</td>
-        <td><input name="torch" type="checkbox" id="torch" value="y"></td>
+        <td><input name="torch" type="hidden" id="torch" value="n">
+	    <input name="torch" type="checkbox" id="torch" value="y"></td>
       </tr>
       <tr>
         <td>Open Contests Only (open contests are the only activity)</td>
-        <td><input name="opens" type="checkbox" id="opens" value="y"></td>
+        <td><input name="opens" type="hidden" id="opens" value="n">
+	    <input name="opens" type="checkbox" id="opens" value="y"></td>
       </tr>
       <tr>
         <td>Merit Scholar</td>
-        <td><input name="merit" type="checkbox" id="merit" value="y"></td>
+        <td><input name="merit" type="hidden" id="merit" value="n">
+	    <input name="merit" type="checkbox" id="merit" value="y"></td>
       </tr>
     </table>
     <p align="center">
