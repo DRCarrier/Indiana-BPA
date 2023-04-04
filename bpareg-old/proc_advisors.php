@@ -23,7 +23,7 @@ $con = new PDO("mysql:host=$servername;dbname=bpareg", $username, $password);
 $con->setAtrribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "INSERT INTO SLCadv (`school_number`, `fname`, `lname`, `sphone`, `cell`, `email`, `size`, `a_c`, `ChapAssign`, `SameAssignment`, `AssignmentComment`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$fname', '$lname', '$sphone', '$cell', '$email', '$size', '$a_c', '$ChapAssign', '$SameAssignment', '$AssignmentComment', NOW(), NOW());";
-
+echo $sql
 $query = $con->query($sql) or die($con->errorInfo());
 
 if ($finished) { header("Location: /new/index-text-main.php?school_number=$school_number"); }
