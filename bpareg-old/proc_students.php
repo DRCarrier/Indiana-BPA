@@ -24,7 +24,7 @@ $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
-$sql = "INSERT INTO students (`id_num`, `school_number`, `fname`, `lname`,`gender`, `cont1`, `cont2`, `size`, `officer`, `officer_candidate`, `vdelegate`, `torch`, `opens`, `merit`, `RegDate`, `UpdateDate`) VALUES ('$id_num', '$school_number', '$fname', '$lname', '$gender', '$cont1', '$cont2', '$size', '$officer', '$officer_candidate', '$vdelegate', '$torch', '$opens', '$merit', NOW(), NOW());";
+$sql = "INSERT INTO students (`id_num`, `school_number`, `fname`, `lname`,`gender`, `region`, `cont1`, `cont2`, `size`, `officer`, `officer_candidate`, `vdelegate`, `torch`, `opens`, `merit`, `RegDate`, `UpdateDate`) VALUES ('$id_num', '$school_number', '$fname', '$lname', '$gender', ' ', '$cont1', '$cont2', '$size', '$officer', '$officer_candidate', '$vdelegate', '$torch', '$opens', '$merit',,  NOW(), NOW());";
 
 $query = $con->query($sql) or die($con->errorInfo());
 
