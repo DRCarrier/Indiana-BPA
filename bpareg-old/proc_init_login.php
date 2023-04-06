@@ -62,4 +62,4 @@
                     $con->query($sql);
                     echo '<form name="form1" method="post" action="/SLCReg/index.php?school_number=' . $school_number . '"><input type="submit" value="Next" name="Next" id="Submit" /></form>';
                 } else {
-                    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username.  Please verify your school number on the School List file and click';
+                    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username.  Please verify your school number on the School List file and click'; }
