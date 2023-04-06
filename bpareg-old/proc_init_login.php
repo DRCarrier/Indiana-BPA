@@ -98,9 +98,8 @@
             }
         }
     }
-    catch
-    {
-         echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">There was an error, likely a database connection issue. Please contact system administrator.</font></h2>';
+    catch (Exception $e) {
+        echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
     ?>
 </body>
