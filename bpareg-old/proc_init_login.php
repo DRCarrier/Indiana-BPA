@@ -28,9 +28,9 @@
     $db_name = "bpareg";
     
     
-    print("Password = "+$password);
-    print("Password2 = "+$password2);
-    print("Username = "+$username);
+    print("Password = ".$password);
+    print("Password2 = ".$password2);
+    print("Username = ".$username);
 
     
     // Attempt to create a new account
@@ -55,7 +55,7 @@
                  // create hashed password
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $pw = $hashed_password;
-                print("Hashed PW = "+$pw);
+                print("Hashed PW = ".$pw);
             } 
             // If not then tell them it isn't complex enough.
             else 
