@@ -27,9 +27,16 @@
     $db_password = "Planetary533TrollOhm";
     $db_name = "bpareg";
     
+    
+    print("Password = "+$password);
+    print("Password2 = "+$password2);
+    print("Username = "+$username);
+
+    
     // Attempt to create a new account
     try 
     {
+        print("Making DB connection");
         // Make sure database connection works.
         $con = new PDO("mysql:host=$servername;dbname=$db_name", $db_username, $db_password);
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -40,12 +47,15 @@
         // If the the two passwords match
         if ($password == $password2) 
         {
+            print("Passwords match");
             // Check the length to make sure it's complex enough
             if (strlen($password) >= 6 && strlen($password) <= 12) 
             {
+                print("hashing");
                  // create hashed password
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $pw = $hashed_password;
+                print("Hashed PW = "+$pw);
             } 
             // If not then tell them it isn't complex enough.
             else 
