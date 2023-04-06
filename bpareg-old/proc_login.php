@@ -18,8 +18,17 @@
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     echo $hashed_password;
-
-
+//establish connection to DB
+    $servername = "localhost";
+$username = "bpareg";
+$password = "Planetary533TrollOhm";
+ 
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//insert password into DB
+    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')"; 
+    
+    
     //Verify hashed password
     $password = 'password3';
     $hashed_password = 'password';
