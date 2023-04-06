@@ -19,7 +19,7 @@
     
     // Grab username/school_number from a post variable
     $username = $_POST['username'];
-    $school_number = $username
+    $school_number = $username;
 
     // Database connection info
     $servername = "localhost";
