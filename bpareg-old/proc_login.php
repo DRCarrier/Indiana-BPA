@@ -23,7 +23,7 @@
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
  
-$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, '$hashed_password' );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //insert password into DB
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')"; 
