@@ -33,34 +33,41 @@
         $pw = null;
 
         if ($password == $password2) {
-            if (strlen($password) >= 6 && strlen($password) <= 12) {
-                $pw = $password;
-            } else {
-                $password = null;
-                echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your password needs to be at least 6 characters and no more than 12 characters. Please click the BACK button on your browser and re-enter your username and password.</h2></font>';
-                exit;
-            }
+    if (strlen($password) >= 6 && strlen($password) <= 12) {
+        $pw = $password;
+    } else {
+        $password = null;
+        echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your password needs to be at least 6 characters and no more than 12 characters. Please click the BACK button on your browser and re-enter your username and password.</h2></font>';
+        exit;
+    }
+} else {
+    $password = null;
+    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your password did not match the confirmed password! Please click the BACK button on your browser and re-enter your username and password.</h2></font>';
+    exit;
+}
+
+if ($pw) {
+    $query2 = "SELECT username FROM login WHERE username ='$username'";
+    $result = $con->query($query2);
+    $count = $result->fetchColumn();
+
+    $query3 = "SELECT school_number FROM schools WHERE school_number='$school_number'";
+    $result2 = $con->query($query3);
+    $count2 = $result2->fetchColumn();
+
+    if ($count == 0) {
+        if ($count2 == 1) {
+            echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created. Click the Next button to continue the registration process.</h2></font>';
+            $sql = "INSERT INTO `login` (`password`, `password2`, `username`) VALUES ('$hashed_password', '$hashed_password', '$username')";
+            $con->query($sql);
+            echo '<form name="form1" method="post" action="/SLCReg/index.php?school_number=' . $school_number . '"><input type="submit" value="Next" name="Next" id="Submit" /></form>';
         } else {
-            $password = null;
-            echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your password did not match the confirmed password! Please click the BACK button on your browser and re-enter your username and password.</h2></font>';
-            exit;
+            echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username. Please verify your school number on the School List file and click the BACK button on your browser to re-enter your username and password.</font></h2>';
         }
+    }
+}
 
-        if ($pw) {
-            $query2 = "SELECT username FROM login WHERE username ='$username'";
-            $result = $con->query($query2);
-            $count = $result->fetchColumn();
 
-            $query3 = "SELECT school_number FROM schools WHERE school_number='$school_number'";
-            $result2 = $con->query($query3);
-            $count2 = $result2->fetchColumn();
 
-            if ($count == 0) {
-                if ($count2 == 1) {
-                    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created.  Click the Next button to continue the registration process.</h2></font>';
-                    $sql = "INSERT INTO `login` (`password`, `password2`, `username`) VALUES ('$hashed_password', '$hashed_password', '$username')";
-                    $con->query($sql);
-                    echo '<form name="form1" method="post" action="/SLCReg/index.php?school_number=' . $school_number . '"><input type="submit" value="Next" name="Next" id="Submit" /></form>';
-                } else {
-                    echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username.  Please verify your school number on the School List file and click'; }
-            }
+
+
