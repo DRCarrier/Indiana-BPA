@@ -17,12 +17,9 @@
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
     
-    // Grab username from a post variable
+    // Grab username/school_number from a post variable
     $username = $_POST['username'];
-    
-    // Grab school number from a session variable
-    session_start();
-    $school_number = $_SESSION['school_number'];
+    $school_number = $username
 
     // Database connection info
     $servername = "localhost";
