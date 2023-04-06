@@ -25,17 +25,25 @@ $school_number=$_SESSION['school_number'];
         <td width="1%" height="279" valign="top">&nbsp;</td>
         <td width="99%" valign="top"><h2 align="left">&nbsp;
                 <?php
+	 // create hash password
+    $password = '$password3';
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    echo $hashed_password;
+		
+		
 				
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
 
-$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
+$con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password);
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 
-$sql = "INSERT INTO `login` ( `password`,`password2`, `username`) VALUES ('$password', '$password2', '$username')"; 
+//    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')"; 
+$sql = "INSERT INTO `login` ( `password`,`password2`, `username`) VALUES ('$hashed_password', '$password2', '$username')"; 
 
 
 
