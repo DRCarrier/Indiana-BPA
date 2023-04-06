@@ -26,7 +26,7 @@ $school_number=$_SESSION['school_number'];
         <td width="99%" valign="top"><h2 align="left">&nbsp;
                 <?php
 	 // create hash password
-    $password = '$password';
+   
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     echo $hashed_password;
