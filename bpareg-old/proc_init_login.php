@@ -74,7 +74,7 @@
         }
        
         // If the password variable was set we should be able to create an account.
-        if (is_null($pw))
+        if (! is_null($pw))
         {
             // Check to see if the user exists, we'll create one if not and update if so.   
             $query2 = "SELECT username FROM login WHERE username ='$username'";
