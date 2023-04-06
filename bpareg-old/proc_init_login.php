@@ -43,7 +43,7 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 //    $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')"; 
-$sql = "INSERT INTO `login` ( `password`,`password2`, `username`) VALUES ('$hashed_password', '$password2', '$username')"; 
+$sql = "INSERT INTO `login` ( `password`,`password3`, `username`) VALUES ('password', '$hashed_password', '$username')"; 
 
 
 
