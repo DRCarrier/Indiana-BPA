@@ -87,7 +87,8 @@
             $query3 = "SELECT school_number FROM schools WHERE school_number='$school_number'";
             $result2 = $con->query($query3);
             $count2 = $result2->fetchColumn();
-            
+            print ($count);
+            print ($count2);
             // If the account doesn't exist we'll create it.
             if ($count == 0) 
             {
