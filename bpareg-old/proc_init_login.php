@@ -79,7 +79,7 @@
             print("Line 79 hashed password value was set, checking if user exists" ."/n");
             
             // Check to see if the user exists, we'll create one if not and update if so.   
-            $query2 = "SELECT username FROM login WHERE username ='$username'";
+            $query2 = "SELECT count(username) FROM login WHERE username ='$username'";
             $result = $con->query($query2);
             $count = $result->fetchColumn();
             
