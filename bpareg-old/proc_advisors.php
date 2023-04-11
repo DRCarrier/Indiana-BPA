@@ -9,9 +9,9 @@ $cell=$_POST['cell'];
 $email=$_POST['email'];
 $size=$_POST['size'];
 $a_c=$_POST['a_c'];
-$ChapAssign=$_POST['Chap_Assign'];
-$SameAssignment=$_POST['Same_Assignment'];
-$AssignmentComment=$_POST['Assignment_Comment'];
+$ChapAssign=$_POST['ChapAssign'];
+$SameAssignment=$_POST['SameAssignment'];
+$AssignmentComment=$_POST['AssignmentComment'];
 $finished=$_POST['finished'];
 $addanother=$_POST['addanother'];
 
