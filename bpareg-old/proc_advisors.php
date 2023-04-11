@@ -20,7 +20,7 @@ $username = "bpareg";
 $password = "Planetary533TrollOhm";
 
 $con = new PDO("mysql:host=$servername;dbname=bpareg", $username, $password);
-$con->setAtrribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 $sql = "INSERT INTO SLCadv (`school_number`, `fname`, `lname`, `sphone`, `cell`, `email`, `size`, `a_c`, `ChapAssign`, `SameAssignment`, `AssignmentComment`, `RegDate`, `UpdateDate`) VALUES ( '$school_number', '$fname', '$lname', '$sphone', '$cell', '$email', '$size', '$a_c', '$ChapAssign', '$SameAssignment', '$AssignmentComment', NOW(), NOW());";
 echo $sql
