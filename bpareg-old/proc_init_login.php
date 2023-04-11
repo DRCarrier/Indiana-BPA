@@ -74,7 +74,7 @@
         }
        
         // If the password variable was set we should be able to create an account.
-        if (! is_null($pw))
+        if (!is_null($pw))
         {
             print("Line 79 hashed password value was set, checking if user exists" ."/n");
             
