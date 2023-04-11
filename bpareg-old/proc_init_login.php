@@ -84,7 +84,7 @@
             $count = $result->fetchColumn();
             
             // Users are tied to schools, we need to make sure the school exists before creating a user.
-            $query3 = "SELECT school_number FROM schools WHERE school_number='$school_number'";
+            $query3 = "SELECT count(school_number) FROM schools WHERE school_number='$school_number'";
             $result2 = $con->query($query3);
             $count2 = $result2->fetchColumn();
             print ($count);
