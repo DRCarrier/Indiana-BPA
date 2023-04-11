@@ -99,7 +99,7 @@
                     print("Line 98 school does exists, attempting database insert" ."/n");
                     
                     echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created. Click the Next button to continue the registration process.</h2></font>';
-                    $sql = "INSERT INTO `login` (`password`, `password2`, `password3`, `username`) VALUES ('$hashed_password', '$hashed_password', $hashed_password', '$username')";
+                    $sql = "INSERT INTO `login` (`password`, `password2`, `password3`, `username`) VALUES ('$hashed_password', '$hashed_password', '$hashed_password', '$username')";
                     print ($sql);
                     $con->query($sql);
                     echo '<form name="form1" method="post" action="/SLCReg/index.php?school_number=' . $school_number . '"><input type="submit" value="Next" name="Next" id="Submit" /></form>';
