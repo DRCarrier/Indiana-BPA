@@ -14,16 +14,16 @@
    
 
     // create hash password
-    //$password = '$password3';
-    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $password = '$password3';
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    //echo $hashed_password;
+    echo $hashed_password;
 
 
     
     
     //Verify hashed password
-   // $password = 'password3';
+    //$password = 'password3';
     //$hashed_password = 'password';
     
     //if (password_verify($password, $hashed_password)) {
