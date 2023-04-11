@@ -9,9 +9,9 @@ $cell=$_POST['cell'];
 $email=$_POST['email'];
 $size=$_POST['size'];
 $a_c=$_POST['a_c'];
-$Chap_Assign=$_POST['ChapAssign'];
-$Same_Assignment=$_POST['SameAssignment'];
-$Assignment_Comment=$_POST['AssignmentComment'];
+$ChapAssign=$_POST['Chap_Assign'];
+$SameAssignment=$_POST['Same_Assignment'];
+$AssignmentComment=$_POST['Assignment_Comment'];
 $finished=$_POST['finished'];
 $addanother=$_POST['addanother'];
 
@@ -22,7 +22,7 @@ $password = "Planetary533TrollOhm";
 $con = new PDO("mysql:host=$servername;dbname=bpareg", $username, $password);
 $con->setAtrribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$sql = "INSERT INTO SLCadv (`school_number`, `fname`, `lname`, `sphone`, `cell`, `email`, `size`, `a_c`, `ChapAssign`, `SameAssignment`, `AssignmentComment`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$fname', '$lname', '$sphone', '$cell', '$email', '$size', '$a_c', '$Chap_Assign', '$Same_Assignment', '$Assignment_Comment', NOW(), NOW());";
+$sql = "INSERT INTO SLCadv (`school_number`, `fname`, `lname`, `sphone`, `cell`, `email`, `size`, `a_c`, `ChapAssign`, `SameAssignment`, `AssignmentComment`, `RegDate`, `UpdateDate`) VALUES ('$school_number', '$fname', '$lname', '$sphone', '$cell', '$email', '$size', '$a_c', '$ChapAssign', '$SameAssignment', '$AssignmentComment', NOW(), NOW());";
 echo $sql
 $query = $con->query($sql) or die($con->errorInfo());
 
