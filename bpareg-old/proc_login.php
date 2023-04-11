@@ -76,7 +76,7 @@ $login = $stmt2->fetch(PDO::FETCH_ASSOC);
     } else {
         echo '<font face="Arial, Helvetica, sans-serif"><b>The username and/or password do not match what we have in our records. Please click the BACK button on your browser and try again. If you do not remember your username and/or password email <a href="mailto:mccloudtr@mvschool.org">Tina McCloud</a></b></font>';
         echo $username;
-        echo $password3;
+        echo $hashed_password;
         
         
         
