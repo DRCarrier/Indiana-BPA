@@ -14,8 +14,8 @@
    
 
     // create hash password
-    $password = '$password3';
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = '$password3';
+    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     //echo $hashed_password;
 
@@ -26,11 +26,11 @@
     $password = 'password3';
     $hashed_password = 'password';
     
-    if (password_verify($password, $hashed_password)) {
-      echo 'Password is valid!';
-    } else {
-     echo 'Invalid password.';
-    }
+    //if (password_verify($password, $hashed_password)) {
+      //echo 'Password is valid!';
+   // } else {
+   //  echo 'Invalid password.';
+    //}
 
 
 
@@ -56,12 +56,12 @@
    $sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :password3";
 $stmt2 = $con->prepare($sql2);
 $stmt2->bindParam(':username', $username);
-$stmt2->bindParam(':password3', $password3);
+$stmt2->bindParam(':password3', $hashed_password);
 $stmt2->execute();
 $login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     // check if login details are correct
-    if ($login && $login['username'] == $username && $login['password3'] == $password3) {
+    if ($login && $login['username'] == $username && $login['password3'] == $hashed_password) {
         //Creates a session variable
     session_start();
     $_SESSION["school_number"]= $username;
