@@ -87,6 +87,7 @@ $school_number=$_SESSION['school_number'];
         </tr>
       </table>        <p>&nbsp;</p></td>
       <td align="left" valign="top"><p>Check this box if your chaperone would be willing to assist with an event:
+        <input name="ChapAssign" type="hidden" id="ChapAssign" value="N">
         <input name="ChapAssign" type="checkbox" id="ChapAssign" value="Y">
       </p>
       <p>&nbsp; </p></td>
@@ -94,6 +95,7 @@ $school_number=$_SESSION['school_number'];
     <tr>
       <td valign="top">Advisor Assignment</td>
       <td colspan="3"><label>
+        <input name="SameAssignment" type="hidden" id="SameAssignment"  accesskey="1" value="N">
         <input name="SameAssignment" type="checkbox" id="SameAssignment" accesskey="2" value="Y">
       I would like the same assignment as last year.<br>
       <p><strong><em>Note: Computer events will be held in the Convention Center. </strong></em></p><br>
