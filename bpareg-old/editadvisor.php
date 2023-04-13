@@ -19,11 +19,10 @@ $adv_id=$_GET['adv_id'];
   
 <?php
 
-
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -64,8 +63,8 @@ echo "
 <option value=\"A\">A</option>
 <option value=\"C\">C</option>
 </td></tr>
-<tr><td>Chaperone Assignment: </td><td> <input type=\"checkbox\" name=\"ChapAssign\" value=\"y\""; if ($advisor[ChapAssign]) { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Same Assignment as Last Year: </td><td> <input type=\"checkbox\" name=\"SameAssignment\" value=\"y\""; if ($advisor[SameAssignment]) { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Chaperone Assignment: </td><td> <input type=\"checkbox\" name=\"ChapAssign\" value=\"y\""; if ($advisor['ChapAssign']=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Same Assignment as Last Year: </td><td> <input type=\"checkbox\" name=\"SameAssignment\" value=\"y\""; if ($advisor['SameAssignment']=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
 <tr><td>Comment: </td><td><input type=\"text\" name=\"AssignmentComment\" value=\"$advisor[AssignmentComment]\"></td></tr>
 
 </table>
