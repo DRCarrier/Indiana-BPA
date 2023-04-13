@@ -1,5 +1,5 @@
 <?php
-//let syou edit housing info (connects to database)
+//lets you edit housing info (connects to database)
 session_start();
 $room_id=$_POST['room_id'];
 $school_number=$_SESSION['school_number'];
