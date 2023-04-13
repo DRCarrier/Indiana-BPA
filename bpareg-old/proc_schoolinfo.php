@@ -25,11 +25,10 @@ $accommodations=$_POST['accommodations'];
 <form name="form1" method="post" action="index-text-main.php<?php echo "?school_number=$school_number"; ?>">
 
 <?php
-
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
