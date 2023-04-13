@@ -173,11 +173,11 @@ echo "
 <option value=\"XXL\">Double Extra Large</option>
 <option value=\"XXXL\">Triple Extra Large</option>
 </td></tr>
-<tr><td>Current State Officer: </td><td> <input type=\"checkbox\" name=\"officer\" value=\"y\""; if ($student[officer] = 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Officer Candidate: </td><td> <input type=\"checkbox\" name=\"officer_candidate\" value=\"y\""; if ($student[officer_candidate]= 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Voting Delegate: </td><td> <input type=\"checkbox\" name=\"vdelegate\" value=\"y\""; if ($student[vdelegate]= 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Torch Awards: </td><td> <input type=\"checkbox\" name=\"torch\" value=\"y\""; if ($student[torch]= 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
-<tr><td>Open Contests Only: </td><td> <input type=\"checkbox\" name=\"opens\" value=\"y\""; if ($student[opens]= 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Current State Officer: </td><td> <input type=\"checkbox\" name=\"officer\" value=\"y\""; if ($student['officer']=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Officer Candidate: </td><td> <input type=\"checkbox\" name=\"officer_candidate\" value=\"y\""; if ($student[officer_candidate]=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Voting Delegate: </td><td> <input type=\"checkbox\" name=\"vdelegate\" value=\"y\""; if ($student[vdelegate]=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Torch Awards: </td><td> <input type=\"checkbox\" name=\"torch\" value=\"y\""; if ($student[torch]=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Open Contests Only: </td><td> <input type=\"checkbox\" name=\"opens\" value=\"y\""; if ($student[opens]=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
 
 
 </table>
@@ -187,6 +187,6 @@ echo "
 ";
 	
 /* Removed unused variables:
-<tr><td>Merit Scholar: </td><td> <input type=\"checkbox\" name=\"merit\" value=\"y\""; if ($student[merit]= 'y') { echo " checked=\"checked\""; } echo "></td></tr>\n
+<tr><td>Merit Scholar: </td><td> <input type=\"checkbox\" name=\"merit\" value=\"y\""; if ($student[merit]=='y') { echo " checked=\"checked\""; } echo "></td></tr>\n
 */
  ?>
