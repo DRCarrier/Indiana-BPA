@@ -1,5 +1,6 @@
 <?php
-$school_number=$_POST['school_number'];
+session_start();
+$school_number=$_SESSION['school_number'];
 $id_num=$_POST['id_num'];
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
