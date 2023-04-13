@@ -19,7 +19,6 @@ $room_id=$_GET['room_id'];
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
