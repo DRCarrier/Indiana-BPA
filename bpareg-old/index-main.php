@@ -11,7 +11,7 @@
 session_start();
 $school_number=$_SESSION['school_number'];
 
-if ($school_number) {  include ('index-text.php'); }
+if (isset($school_number)) {  include ('index-text.php'); }
 
 
 
