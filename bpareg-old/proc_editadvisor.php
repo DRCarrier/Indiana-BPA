@@ -18,18 +18,16 @@ $AssignmentComment=$_POST['AssignmentComment'];
 header ("Location: /new/advisorlist.php?school_number=$school_number");
 echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 
-
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
- 
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 
 $sql = "UPDATE SLCadv SET fname='$fname', lname='$lname', sphone='$sphone', cell='$cell', email='$email', size='$size', a_c='$a_c', ChapAssign='$ChapAssign', SameAssignment='$SameAssignment', AssignmentComment='$AssignmentComment', UpdateDate=NOW() WHERE adv_id = '$adv_id)'";
 
-//$query = mysql_query($sql) or die(mysql_error());
 $query = $con->query($sql) or die($con->errorInfo());
 
 
