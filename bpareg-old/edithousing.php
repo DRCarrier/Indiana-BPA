@@ -9,6 +9,8 @@ body {
 session_start();
 $school_number=$_SESSION['school_number'];
 $room_id=$_GET['room_id'];
+echo $school_number;
+echo $room_id;
 ?>
 
 
