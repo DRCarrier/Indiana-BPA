@@ -11,13 +11,15 @@ $a_c = $_POST['a_c'];
 $ChapAssign = $_POST['ChapAssign'];
 $SameAssignment = $_POST['SameAssignment'];
 $AssignmentComment = $_POST['AssignmentComment'];
-$finished = isset($_POST['finished']) ? true : false;
-$addanother = isset($_POST['addanother']) ? true : false;
+$finished = $_POST['finished'];
+$addanother = $_POST['addanother'];
+//$finished = isset($_POST['finished']) ? true : false;
+//$addanother = isset($_POST['addanother']) ? true : false;
 
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg", $username, $password);
 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
