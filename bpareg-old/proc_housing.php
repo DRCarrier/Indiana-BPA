@@ -11,10 +11,10 @@ $occ_id4=$_POST['occ_id4'];
 $finished=$_POST['finished'];
 $addanother=$_POST['addanother'];
 
+//Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
-
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
