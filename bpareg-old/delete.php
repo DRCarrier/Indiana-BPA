@@ -39,7 +39,6 @@ $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "DELETE from SLCadv WHERE adv_id='$adv_id'";
 
 
-//mysql_query($sql, $con);
 $con->query($sql);
        
 	
@@ -48,9 +47,6 @@ $con->query($sql);
 	echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">The record has been deleted.  Click the Next button to display the updated advisor list.</h2></font>';
 
 
-
-
-//mysql_close($con);
 $con = NULL;
 
 
