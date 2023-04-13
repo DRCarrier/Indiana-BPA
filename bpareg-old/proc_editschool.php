@@ -4,7 +4,6 @@ $school_number=$_SESSION['school_number'];
 $address=$_POST['address'];
 $city=$_POST['city'];
 $zip=$_POST['zip'];
-
 $envact=$_POST['envact'];
 $community=$_POST['community'];
 $olympics=$_POST['olympics'];
@@ -28,7 +27,6 @@ $other_recog=$_POST['other_recog'];
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
- 
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
