@@ -26,7 +26,6 @@ echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
 $servername = "localhost";
 $username = "bpareg";
 $password = "Planetary533TrollOhm";
- 
 $con = new PDO("mysql:host=$servername;dbname=bpareg",$username, $password );
 $con -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
