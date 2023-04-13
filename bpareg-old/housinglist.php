@@ -1,8 +1,6 @@
 <?php
 session_start();
-echo session_id();
 $school_number=$_SESSION['school_number']; 
-print_r($_SESSION);
 $delete = isset($_GET['delete']) ? true : false;
 $room_id = isset($_GET['room_id']) ? $_GET['room_id'] : 0;
 
@@ -55,7 +53,7 @@ $housing_block .= "<td>$housing[occ_id4]</td>";
 $housing_block .= "<td><a href=\"housinglist.php?school_number=$school_number&room_id=$housing[room_id]&delete=1\">Delete?</a></td>";
 $housing_block .= "</tr>";
 
- //$housing = mysql_fetch_array($result);
+
 $housing = $result->fetch(PDO::FETCH_BOTH);
 }
 
