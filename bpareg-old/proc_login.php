@@ -23,14 +23,14 @@
     
     
     //Verify hashed password
-   // $password = 'password3';
-    //$hashed_password = 'password';
+    $password = 'password3';
+    $hashed_password = 'password';
     
-   // if (password_verify($password, $hashed_password)) {
-     // echo 'Password is valid!';
-    //} else {
-    // echo 'Invalid password.';
-    //}
+    if (password_verify($password, $hashed_password)) {
+      echo 'Password is valid!';
+    } else {
+     echo 'Invalid password.';
+    }
 
 
 
