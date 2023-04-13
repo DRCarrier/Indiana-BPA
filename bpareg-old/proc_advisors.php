@@ -13,8 +13,7 @@ $SameAssignment = $_POST['SameAssignment'];
 $AssignmentComment = $_POST['AssignmentComment'];
 $finished = $_POST['finished'];
 $addanother = $_POST['addanother'];
-//$finished = isset($_POST['finished']) ? true : false;
-//$addanother = isset($_POST['addanother']) ? true : false;
+
 
 //Connection to DB using PDO:
 $servername = "localhost";
