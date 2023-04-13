@@ -37,7 +37,7 @@
 
 
 
-    // establish database connection
+    //Connection to DB using PDO:
     $servername = "localhost";
     $dbusername = "bpareg"; 
     $dbpassword = "Planetary533TrollOhm";
