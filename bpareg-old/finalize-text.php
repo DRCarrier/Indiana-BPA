@@ -20,8 +20,8 @@ $password = "Planetary533TrollOhm";
 $dbname = "bpareg";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $conn->prepare("SELECT * FROM SLCschl WHERE school_number = :school_number");
     $stmt->bindParam(':school_number', $school_number);
@@ -51,6 +51,6 @@ try {
 } catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-$conn = null;
+$con = null;
 // Code taken out --> <input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 ?>
