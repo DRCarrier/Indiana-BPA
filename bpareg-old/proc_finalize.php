@@ -5,6 +5,7 @@ $completed=$_POST['completed'];
 $advisors=$_POST['advisors'];
 $students=$_POST['students'];
 $chaperones=$_POST['chaperones'];
+$id_num=$POST['id_num'];
 
 //Connection to DB using PDO:
 $servername = "localhost";
