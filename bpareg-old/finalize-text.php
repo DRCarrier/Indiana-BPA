@@ -44,7 +44,7 @@ try {
     <tr><td>Number of Chaperones Registered: </td><td><input type=\"text\" name=\"chaperones\" value=\"$school[chaperones]\"></td></tr>
     </table>
     <input type=\"hidden\" name=\"school_number\" value=\"$school_number\">
-    <input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
+   
     <input type=\"submit\" value=\"Finalize Registration\">
     ";  
 
@@ -52,4 +52,5 @@ try {
     echo "Error: " . $e->getMessage();
 }
 $conn = null;
+// Code taken out --> <input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 ?>
