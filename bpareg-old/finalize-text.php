@@ -23,7 +23,7 @@ try {
     $con = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $conn->prepare("SELECT * FROM SLCschl WHERE school_number = :school_number");
+    $stmt = $con->prepare("SELECT * FROM SLCschl WHERE school_number = :school_number");
     $stmt->bindParam(':school_number', $school_number);
     $stmt->execute();
     $school = $stmt->fetch(PDO::FETCH_BOTH);
