@@ -14,8 +14,8 @@
    
 
     // create hash password
-    $password = '$password3';
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = '$password3';
+    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
    
     
     //echo $hashed_password;
