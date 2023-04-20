@@ -25,7 +25,7 @@
     
     //Verify hashed password
     //$password = 'password3';
-    //$h//ashed_password = 'password';
+    $hashed_password = password_hash($password3, PASSWORD_DEFAULT);
     
     //if (password_verify($password, $hashed_password)) {
       //echo 'Password is valid!';
@@ -62,7 +62,7 @@ $stmt2->execute();
 $login = $stmt2->fetch(PDO::FETCH_ASSOC);
 
     // check if login details are correct
-    if ($login && $login['username'] == $username && password_verify($password3, $login['password3'])) {
+    if ($login && $login['username'] == $username && password_verify($hashed_password, $login['password3'])) {
         //Creates a session variable
     session_start();
     $_SESSION["school_number"]= $username;
@@ -78,6 +78,7 @@ $login = $stmt2->fetch(PDO::FETCH_ASSOC);
         echo '<font face="Arial, Helvetica, sans-serif"><b>The username and/or password do not match what we have in our records. Please click the BACK button on your browser and try again. If you do not remember your username and/or password email <a href="mailto:mccloudtr@mvschool.org">Tina McCloud</a></b></font>';
         echo $username;
         echo $password3;
+        echo $hashed_password;
         
         
         
