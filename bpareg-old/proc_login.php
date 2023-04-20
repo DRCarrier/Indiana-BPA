@@ -23,8 +23,7 @@
 
     //Verify hashed password
     $password = 'password3';
-    $hashed_password = 'password3';
-    //$hashed_password = 'password';
+    $hashed_password = 'password';
     //$password = 'password3';
     //$h//ashed_password = 'password';
 
