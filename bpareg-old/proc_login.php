@@ -26,11 +26,11 @@
     $hashed_password = 'password';
    
 
-    //if (password_verify($password, $hashed_password)) {
-      //echo 'Password is valid!';
-    //} else {
-    //echo 'Invalid password.';
-    //}
+    if (password_verify($password, $hashed_password)) {
+      echo 'Password is valid!';
+    } else {
+    echo 'Invalid password.';
+    }
    
 
 
@@ -58,12 +58,7 @@ $stmt2->bindParam(':password3', $password3);
 $stmt2->execute();
 $login = $stmt2->fetch(PDO::FETCH_ASSOC);
  
-    //Verify
-    if (password_verify($password, $hashed_password)) {
-      echo 'Password is valid!';
-    } else {
-     echo 'Invalid password.';
-    }
+   
     
     
     // check if login details are correct
