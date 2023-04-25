@@ -31,13 +31,7 @@
     } else {
      echo 'Invalid password.';
     }
-     // Hash a new password for storing in the database.
-    // The function automatically generates a cryptographically safe salt.
-   $hashToStoreInDb = password_hash($_POST['password'], PASSWORD_DEFAULT);
-   // Check if the hash of the entered login password, matches the stored hash.
-// The salt and the cost factor will be extracted from $existingHashFromDb.
-   $isPasswordCorrect = password_verify($_POST['password'], $existingHashFromDb);
-
+   
 
 
     //Connection to DB using PDO:
