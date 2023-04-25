@@ -27,17 +27,12 @@
     $db_password = "Planetary533TrollOhm";
     $db_name = "bpareg";
     
-    
-    print("Password = " . $password ."/n");
-    print("Password2 = ". $password2 ."/n");
-    print("Username = ". $username ."/n");
 
     
     // Attempt to create a new account
     try 
     {
-        print("Making DB connection" ."/n");
-        // Make sure database connection works.
+        // Database Connection using PDO
         $con = new PDO("mysql:host=$servername;dbname=$db_name", $db_username, $db_password);
         $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -47,15 +42,12 @@
         // If the the two passwords match
         if ($password == $password2) 
         {
-            print("Passwords match" ."/n");
             // Check the length to make sure it's complex enough
             if (strlen($password) >= 6 && strlen($password) <= 12) 
             {
-                print("hashing" ."/n");
-                 // create hashed password
+                // create hashed password
                 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                 $pw = $hashed_password;
-                print("Hashed PW = ".$pw ."/n");
             } 
             // If not then tell them it isn't complex enough.
             else 
@@ -75,9 +67,7 @@
        
         // If the password variable was set we should be able to create an account.
         if (!is_null($pw))
-        {
-            print("Line 79 hashed password value was set, checking if user exists" ."/n");
-            
+        {          
             // Check to see if the user exists, we'll create one if not and update if so.   
             $query2 = "SELECT count(username) FROM login WHERE username ='$username'";
             $result = $con->query($query2);
@@ -87,20 +77,15 @@
             $query3 = "SELECT count(school_number) FROM schools WHERE school_number='$school_number'";
             $result2 = $con->query($query3);
             $count2 = $result2->fetchColumn();
-            print ($count);
-            print ($count2);
+
             // If the account doesn't exist we'll create it.
             if ($count == 0) 
             {
-                print("Line 94 account doesn't exist" ."/n");
                 // If the school exists we can continue
                 if ($count2 == 1) 
-                {
-                    print("Line 98 school does exists, attempting database insert" ."/n");
-                    
+                {                    
                     echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created. Click the Next button to continue the registration process.</h2></font>';
                     $sql = "INSERT INTO `login` (`password`, `password2`, `password3`, `username`) VALUES ('$hashed_password', '$hashed_password', '$hashed_password', '$username')";
-                    print ($sql);
                     $con->query($sql);
                     echo '<form name="form1" method="post" action="/SLCReg/index.php?school_number=' . $school_number . '"><input type="submit" value="Next" name="Next" id="Submit" /></form>';
                 } 
@@ -108,8 +93,7 @@
             // School doesn't exist; so we need to give an error.
             else 
             {
-                print("Line 108 school does not exist" ."/n");
-                echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username. Please verify your school number on the School List file and click the BACK button on your browser to re-enter your username and password.</font></h2>';
+                  echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">You have entered an invalid school number as your username. Please verify your school number on the School List file and click the BACK button on your browser to re-enter your username and password.</font></h2>';
             }
         }
     }
