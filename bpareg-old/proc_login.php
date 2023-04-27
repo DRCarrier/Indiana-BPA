@@ -62,7 +62,7 @@ $login = $stmt2->fetch(PDO::FETCH_ASSOC);
     
     
     // check if login details are correct
-    if ($login && $login['username'] == $username && $login['password3'] == $password3) {
+    if ($login && $login['username'] == $username && password_verify($password3, $login['password3'])){ 
   //  if ($login && $login['username'] == $username && password_verify($password3, $login['password3'])) {
         //Creates a session variable
     session_start();
