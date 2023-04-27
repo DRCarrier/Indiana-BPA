@@ -54,7 +54,7 @@ $stmt2->bindParam(':username', $username);
 $stmt2->execute();
 $login = $stmt2->fetch(PDO::FETCH_ASSOC);
  
-   if (password_verify($password, $login['password3'])) {
+   if (password_verify($password3, $login['password3'])) {
       echo 'Password is valid!';
     } else {
     echo 'Invalid password.';
