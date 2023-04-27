@@ -10,7 +10,7 @@
  
 <?php 
  session_start();
- print_r($_SESSION);
+
  ?>
  
 
@@ -22,7 +22,7 @@ if(isset($_SESSION["school_number"])){
   
 }else{header("Location: /new/error.php");
  }
-// $school_number=$_POST['school_number'];
+
  $school_number=$_SESSION["school_number"];
 ?>
  
