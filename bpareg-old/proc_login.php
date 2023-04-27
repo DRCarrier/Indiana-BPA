@@ -13,22 +13,6 @@
     $school_number = $_POST['username'];
 
 
-    // create hash password
-    //$password = '$password3';
-    //$hashed_password = password_hash($password, PASSWORD_DEFAULT);
-       //echo $hashed_password;
-
-
-
-
-    //Verify hashed password
-   
-   
-
-    
-   
-
-
     //Connection to DB using PDO:
     $servername = "localhost";
     $dbusername = "bpareg"; 
@@ -36,50 +20,26 @@
     $dbname = "bpareg"; // fixed: added the database name to be used
     $con = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    // perform update query
-  //  $query = "UPDATE `login` SET `password3` =  :password WHERE `username` = :username";
-   // $stmt = $con->prepare($query);
-  //  $stmt->bindParam(':password', $password3);
-   // $stmt->bindParam(':username', $username);
-   // $stmt->execute();
-
+   
     // fetch login details for verification
     $sql2 = "SELECT * FROM login WHERE username = :username";
-  //$sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :password3;
-  //$sql2 = "SELECT * FROM login WHERE username = :username AND password3 = :hashed_password";
-$stmt2 = $con->prepare($sql2);
-$stmt2->bindParam(':username', $username);
-//$stmt2->bindParam(':password3', $password3);
-//$stmt2->bindParam(':hashed_password', $hashed_password);
-$stmt2->execute();
-$login = $stmt2->fetch(PDO::FETCH_ASSOC);
+    $stmt2 = $con->prepare($sql2);
+    $stmt2->bindParam(':username', $username);
+    $stmt2->execute();
+    $login = $stmt2->fetch(PDO::FETCH_ASSOC);
  
-   if (password_verify($password3, $login['password3'])) {
-      echo 'Password is valid!';
-    } else {
-    echo 'Invalid password.';
-    }
-    
+  
     
     // check if login details are correct
     if ($login && $login['username'] == $username && password_verify($password3, $login['password3'])){ 
-  //  if ($login && $login['username'] == $username && password_verify($password3, $login['password3'])) {
         //Creates a session variable
-    session_start();
-    $_SESSION["school_number"]= $username;
-    header("Location:/new/index-text-main.php");
-        //echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Click the Next button to continue to your registration.</font></h2>';
-        //echo '<form name="form1" method="post" action="index-text-main.php">';
-        //echo "<input type=\"hidden\" name=\"school_number\" value=\"$school_number\">";
-        //echo "<input type=\"submit\" value=\"Next\" name=\"Next\" id=\"Submit\" />";
-        //echo '</form>';
+     session_start();
+     $_SESSION["school_number"]= $username;
+     header("Location:/new/index-text-main.php");
+        
     } else {
         echo '<font face="Arial, Helvetica, sans-serif"><b>The username and/or password do not match what we have in our records. Please click the BACK button on your browser and try again. If you do not remember your username and/or password email <a href="mailto:mccloudtr@mvschool.org">Tina McCloud</a></b></font>';
-        echo $username;
-        echo $password3;
-        
-        
-        
+     
     }
     ?>
 </body>
