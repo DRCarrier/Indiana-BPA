@@ -87,7 +87,8 @@
                     echo '<h2 align="left"><font face="Arial, Helvetica, sans-serif">Your username and password have been created. Click the Next button to continue the registration process.</h2></font>';
                     $sql = "INSERT INTO `login` (`password`, `password2`, `password3`, `username`) VALUES ('$hashed_password', '$hashed_password', '$hashed_password', '$username')";
                     $con->query($sql);
-                    echo '<form name="form1" method="post" action="/new/index-text-main.php?school_number=' . $school_number . '"><a href="index-text-main.php<?php echo "?school_number=$school_number" ?>"></a><input type="submit" value="Next" name="Next" id="Submit" /></form>';
+                    echo '<form name="form1" method="post" action="/new/index-text-main.php?school_number=' . $school_number . '"><a href="index-text-main.php?school_number=' . $school_number . '"></a><input type="submit" value="Next" name="Next" id="Submit" /></form>';
+             
                 } 
             }
             // School doesn't exist; so we need to give an error.
