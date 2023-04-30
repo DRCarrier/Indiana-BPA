@@ -15,6 +15,9 @@ $school_number=$_SESSION['school_number'];
 
 
 <?php
+error_reporting(E_ERROR); // set error reporting level to display only fatal errors
+ini_set('display_errors', 0); // disable display of error messages on the screen
+	
 //Connection to DB using PDO:
 $servername = "localhost";
 $username = "bpareg";
@@ -63,7 +66,5 @@ Removed unused variables:
 
 <input type=\"hidden\" name=\"id_num\" value=\"$id_num\">
 */
-	
-error_reporting(E_ERROR); // set error reporting level to display only fatal errors
-ini_set('display_errors', 0); // disable display of error messages on the screen
+
 ?>
